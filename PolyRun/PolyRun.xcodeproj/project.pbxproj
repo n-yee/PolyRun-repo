@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		704A668D18207E30007C1087 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704A668C18207E30007C1087 /* MapKit.framework */; };
 		CF2C83A21819E5BC00C2C073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A11819E5BC00C2C073 /* Foundation.framework */; };
 		CF2C83A41819E5BC00C2C073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A31819E5BC00C2C073 /* CoreGraphics.framework */; };
 		CF2C83A61819E5BC00C2C073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A51819E5BC00C2C073 /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		704A668C18207E30007C1087 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CF2C839E1819E5BC00C2C073 /* PolyRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2C83A11819E5BC00C2C073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF2C83A31819E5BC00C2C073 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704A668D18207E30007C1087 /* MapKit.framework in Frameworks */,
 				CF2C83A41819E5BC00C2C073 /* CoreGraphics.framework in Frameworks */,
 				CF2C83A61819E5BC00C2C073 /* UIKit.framework in Frameworks */,
 				CF2C83A21819E5BC00C2C073 /* Foundation.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		CF2C83A01819E5BC00C2C073 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				704A668C18207E30007C1087 /* MapKit.framework */,
 				CF2C83A11819E5BC00C2C073 /* Foundation.framework */,
 				CF2C83A31819E5BC00C2C073 /* CoreGraphics.framework */,
 				CF2C83A51819E5BC00C2C073 /* UIKit.framework */,
@@ -474,6 +478,7 @@
 				CF2C83D51819E5BD00C2C073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF2C83D61819E5BD00C2C073 /* Build configuration list for PBXNativeTarget "PolyRunTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +487,7 @@
 				CF2C83D81819E5BD00C2C073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
