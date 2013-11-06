@@ -9,6 +9,7 @@
 #import "AchievementsViewController.h"
 
 @interface AchievementsViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *firstRow;
 
 @end
 
@@ -26,6 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.firstRow setScrollEnabled:YES];
+    [self.firstRow setContentSize: CGSizeMake(500, 50)];
 	// Do any additional setup after loading the view.
 }
 
