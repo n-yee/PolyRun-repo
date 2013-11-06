@@ -189,6 +189,7 @@ int hours = 0;
     return locations;
 }
 
+
 - (void) setRoute: (NSArray *) path
 {
     
@@ -200,6 +201,11 @@ int hours = 0;
         
         coords[i] = coordinate;
     }
+    
+    CLLocation *tmpLoc = [path objectAtIndex:path.count+1];
+    CLLocationCoordinate2D lastCoord = tmpLoc.coordinate;
+    
+    coords[path.count+1] = lastCoord;
     
     MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:path.count];
     
