@@ -23,6 +23,7 @@
 		CF2C83C61819E5BD00C2C073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A51819E5BC00C2C073 /* UIKit.framework */; };
 		CF2C83CE1819E5BD00C2C073 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF2C83CC1819E5BD00C2C073 /* InfoPlist.strings */; };
 		CF2C83D01819E5BD00C2C073 /* PolyRunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C83CF1819E5BD00C2C073 /* PolyRunTests.m */; };
+		D2BA41301829CD5B00FDA64D /* AchievementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		CF2C83CB1819E5BD00C2C073 /* PolyRunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PolyRunTests-Info.plist"; sourceTree = "<group>"; };
 		CF2C83CD1819E5BD00C2C073 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF2C83CF1819E5BD00C2C073 /* PolyRunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolyRunTests.m; sourceTree = "<group>"; };
+		D2BA412E1829CD5B00FDA64D /* AchievementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsViewController.h; sourceTree = "<group>"; };
+		D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				CF2C83B01819E5BC00C2C073 /* AppDelegate.h */,
 				CF2C83B11819E5BC00C2C073 /* AppDelegate.m */,
 				CF2C83B31819E5BC00C2C073 /* Main_iPhone.storyboard */,
+				D2BA412E1829CD5B00FDA64D /* AchievementsViewController.h */,
+				D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */,
 				CF2C83B61819E5BC00C2C073 /* Main_iPad.storyboard */,
 				CF2C83B91819E5BC00C2C073 /* ViewController.h */,
 				CF2C83BA1819E5BC00C2C073 /* ViewController.m */,
@@ -259,6 +264,7 @@
 			files = (
 				CF2C83BB1819E5BC00C2C073 /* ViewController.m in Sources */,
 				CF2C83B21819E5BC00C2C073 /* AppDelegate.m in Sources */,
+				D2BA41301829CD5B00FDA64D /* AchievementsViewController.m in Sources */,
 				CF2C83AE1819E5BC00C2C073 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
