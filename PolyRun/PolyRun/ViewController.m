@@ -15,16 +15,17 @@
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
 @property (weak, nonatomic) IBOutlet UILabel *timer;
 @property NSUserDefaults *defaults;
+@property CLLocation *timerStartLoc;
 @property CLLocation *initialLoc;
 @property int seconds;
 @property int minutes;
 @property int hours;
 @property bool startTimer;
+
 @end
 
 
 @implementation ViewController
-//#define THE_SPAN 0.005f;
 
 - (void)viewDidLoad
 {
@@ -85,7 +86,8 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *loc = [locations firstObject];
-    NSLog(@"lat: %lf, long: %lf, speed:%lf", loc.coordinate.latitude, loc.coordinate.longitude, loc.speed);
+    _initialLoc = loc;
+    //NSLog(@"lat: %lf, long: %lf, speed:%lf", loc.coordinate.latitude, loc.coordinate.longitude, loc.speed);
     
     if (self.alreadyZoomed == NO) {
         [self zoomToLocation:loc.coordinate];
@@ -94,7 +96,7 @@
     
     if (loc.speed > 0.5 && !_startTimer) {
         _startTimer = true;
-        _initialLoc = loc;
+        _timerStartLoc = loc;
     }
     
     
@@ -140,16 +142,15 @@
     
     NSMutableArray * locations = [[NSMutableArray alloc] init];
     
-    
     MKPointAnnotation *startPoint = [[MKPointAnnotation alloc] init];
     
-    CLLocationCoordinate2D coordStart;
-    coordStart.latitude = self.MapView.userLocation.location.coordinate.latitude;
-    coordStart.longitude= self.MapView.userLocation.location.coordinate.longitude;
+    CLLocationCoordinate2D startP;
+    startP.latitude = _locMgr.location.coordinate.latitude;
+    startP.longitude = _locMgr.location.coordinate.longitude;
     
-    startPoint.coordinate=coordStart;
+    startPoint.coordinate=startP;
     
-    [locations addObject:startPoint];
+   [locations addObject:startPoint];
     
     MKPointAnnotation *p1 = [[MKPointAnnotation alloc] init];
     
@@ -212,17 +213,25 @@
 - (void) setRoute: (NSArray *) path
 {
     
-    CLLocationCoordinate2D coords[path.count];
+    CLLocationCoordinate2D coords[path.count +1];
+    
+    
     
     for (NSInteger i = 0; i < path.count; i++) {
         CLLocation *location = [path objectAtIndex:i];
         CLLocationCoordinate2D coordinate = location.coordinate;
         
+        
+        
         coords[i] = coordinate;
+        
+        NSLog(@"Long: %@ lat: %@", [NSString stringWithFormat: @"%g", coords[i].longitude], [NSString stringWithFormat: @"%g", coords[i].latitude]);
+        
     }
 
+    coords[path.count] = coords[0];
     
-    MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:path.count];
+    MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:path.count+1];
     
     self.MapView.delegate = self;
     
