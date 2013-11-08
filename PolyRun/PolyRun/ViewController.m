@@ -14,14 +14,17 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
 @property (weak, nonatomic) IBOutlet UILabel *timer;
+@property NSUserDefaults *defaults;
+@property CLLocation *initialLoc;
+@property int seconds;
+@property int minutes;
+@property int hours;
+@property bool startTimer;
 @end
 
 
 @implementation ViewController
 //#define THE_SPAN 0.005f;
-int seconds = 0;
-int minutes = 0;
-int hours = 0;
 
 - (void)viewDidLoad
 {
@@ -46,6 +49,11 @@ int hours = 0;
     self.locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     self.locMgr.delegate = self;
     [self.locMgr startUpdatingLocation];
+    _defaults = [NSUserDefaults standardUserDefaults];
+    _seconds = 0;
+    _minutes = 0;
+    _hours = 0;
+    _startTimer = false;
     
     self.MapView.showsUserLocation = YES;
     
@@ -83,15 +91,40 @@ int hours = 0;
         [self zoomToLocation:loc.coordinate];
         self.alreadyZoomed = YES;
     }
-    if (loc.speed > 0.5 && loc.speed < 6 && seconds != 60) {
-        [self startTimer];
-        self.timer.text = [NSString stringWithFormat:@"%i:%i:%i", hours, minutes, seconds];
+    
+    if (loc.speed > 0.5 && !_startTimer) {
+        _startTimer = true;
+        _initialLoc = loc;
+    }
+    
+    
+    if(_startTimer && loc.speed < 6)
+    {
+        _seconds++;
+        if(_seconds >= 60)
+        {
+            _minutes++;
+            _seconds = 0;
+        }
+        
+        if(_minutes >= 60)
+        {
+            _hours++;
+            _minutes = 0;
+        }
+        
+        self.timer.text = [NSString stringWithFormat:@"%i, %i, %i", _hours, _minutes, _seconds];
     }
     else if (loc.speed > 6) {
         self.timer.text = @"Cheater.";
-        hours = 0;
-        minutes = 0;
-        seconds = 60;
+        _hours = 0;
+        _minutes = 0;
+        _seconds = 0;
+    }
+    
+    if([loc distanceFromLocation:_initialLoc] < 5 && _minutes > 2)
+    {
+        _startTimer = false;
     }
 }
 
@@ -101,20 +134,6 @@ int hours = 0;
     // Dispose of any resources that can be recreated.
 }
 
-//timer counts up
-- (void) startTimer {
-    if (seconds <59) seconds++;
-    else if (seconds == 59 && minutes<59) {
-        minutes++;
-        seconds = 0;
-    }
-    else if (seconds == 59 && minutes == 59) {
-        hours++;
-        minutes = 0;
-        seconds = 0;
-    }
-    self.timer.text = [NSString stringWithFormat:@"%i, %i, %i", hours, minutes, seconds];
-}
 
 -(NSMutableArray*) getRoute
 {
@@ -201,11 +220,7 @@ int hours = 0;
         
         coords[i] = coordinate;
     }
-    
-    CLLocation *tmpLoc = [path objectAtIndex:path.count+1];
-    CLLocationCoordinate2D lastCoord = tmpLoc.coordinate;
-    
-    coords[path.count+1] = lastCoord;
+
     
     MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:path.count];
     
