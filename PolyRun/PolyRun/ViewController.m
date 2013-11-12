@@ -250,6 +250,35 @@
     
     return polylineView;
 }
+/*
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
+    if (!pinView)
+        {
+    pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
+    pinView.pinColor = MKPinAnnotationColorPurple;
+        }
+    return pinView;
+}
+ 
+ 
+ */
+- (double) round: (double) num
+{
+    if (num>=0) {
+        num+=0.5;
+        
+    }
+    else {
+        num-=0.5;
+    }
+    
+    double roundNum = num;
+    
+    return roundNum;
+    
+}
 
 
 
