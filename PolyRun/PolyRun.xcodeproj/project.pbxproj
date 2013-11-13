@@ -23,6 +23,7 @@
 		CF2C83C61819E5BD00C2C073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A51819E5BC00C2C073 /* UIKit.framework */; };
 		CF2C83CE1819E5BD00C2C073 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF2C83CC1819E5BD00C2C073 /* InfoPlist.strings */; };
 		CF2C83D01819E5BD00C2C073 /* PolyRunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C83CF1819E5BD00C2C073 /* PolyRunTests.m */; };
+		D29EEB8F183301F900A92DF6 /* achievementsDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EEB8E183301F900A92DF6 /* achievementsDescriptionViewController.m */; };
 		D2BA41301829CD5B00FDA64D /* AchievementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		CF2C83CB1819E5BD00C2C073 /* PolyRunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PolyRunTests-Info.plist"; sourceTree = "<group>"; };
 		CF2C83CD1819E5BD00C2C073 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF2C83CF1819E5BD00C2C073 /* PolyRunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolyRunTests.m; sourceTree = "<group>"; };
+		D29EEB8D183301F900A92DF6 /* achievementsDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = achievementsDescriptionViewController.h; sourceTree = "<group>"; };
+		D29EEB8E183301F900A92DF6 /* achievementsDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = achievementsDescriptionViewController.m; sourceTree = "<group>"; };
 		D2BA412E1829CD5B00FDA64D /* AchievementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsViewController.h; sourceTree = "<group>"; };
 		D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +127,8 @@
 				CF2C83B01819E5BC00C2C073 /* AppDelegate.h */,
 				CF2C83B11819E5BC00C2C073 /* AppDelegate.m */,
 				CF2C83B31819E5BC00C2C073 /* Main_iPhone.storyboard */,
+				D29EEB8D183301F900A92DF6 /* achievementsDescriptionViewController.h */,
+				D29EEB8E183301F900A92DF6 /* achievementsDescriptionViewController.m */,
 				D2BA412E1829CD5B00FDA64D /* AchievementsViewController.h */,
 				D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */,
 				CF2C83B61819E5BC00C2C073 /* Main_iPad.storyboard */,
@@ -262,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29EEB8F183301F900A92DF6 /* achievementsDescriptionViewController.m in Sources */,
 				CF2C83BB1819E5BC00C2C073 /* ViewController.m in Sources */,
 				CF2C83B21819E5BC00C2C073 /* AppDelegate.m in Sources */,
 				D2BA41301829CD5B00FDA64D /* AchievementsViewController.m in Sources */,
