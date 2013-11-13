@@ -70,11 +70,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lLr-AU-BXP">
-                                <rect key="frame" x="0.0" y="139" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NP9-wl-gg0">
-                                        <rect key="frame" x="37" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="-65" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.48770805029999997" green="0.48770805029999997" blue="0.48770805029999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -86,21 +86,8 @@
                                             <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="7XH-XV-U6I"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wWg-HV-n97">
-                                        <rect key="frame" x="145" y="0.0" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.48770805029999997" green="0.48770805029999997" blue="0.48770805029999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="numberOfPinsLevelThree">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="7OQ-Uc-SFM"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b6t-54-Whf">
-                                        <rect key="frame" x="94" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="101" y="-65" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.48770805029999997" green="0.48770805029999997" blue="0.48770805029999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -112,6 +99,58 @@
                                             <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="Dnr-ha-yFa"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wWg-HV-n97">
+                                        <rect key="frame" x="202" y="-65" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.48770805029999997" green="0.48770805029999997" blue="0.48770805029999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="numberOfPinsLevelThree">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="7OQ-Uc-SFM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f29-4v-iaJ">
+                                        <rect key="frame" x="303" y="-65" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.48770805029999997" green="0.48770805029999997" blue="0.48770805029999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="numberOfPinsLevelFour">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="KHY-Gu-3ER"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8Iw-ku-CVb">
+                                        <rect key="frame" x="404" y="-65" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.48770805029999997" green="0.48770805029999997" blue="0.48770805029999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="numberOfPinsLevelFive">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="vWI-b9-HOZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NDY-6o-Hqt">
+                                        <rect key="frame" x="505" y="-65" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.48770805029999997" green="0.48770805029999997" blue="0.48770805029999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="numberOfPinsLevelSix">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="43W-EN-yoz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -119,8 +158,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="a6C-ss-2H8"/>
                     <connections>
-                        <outlet property="firstRow" destination="lLr-AU-BXP" id="v4i-z1-hbT"/>
+                        <outlet property="numberOfPins" destination="lLr-AU-BXP" id="CeC-tu-5vX"/>
+                        <outlet property="numberOfPinsLevelFive" destination="8Iw-ku-CVb" id="Mu9-IE-qPa"/>
+                        <outlet property="numberOfPinsLevelFour" destination="f29-4v-iaJ" id="HqV-VF-5Cf"/>
                         <outlet property="numberOfPinsLevelOne" destination="NP9-wl-gg0" id="gcI-s1-Zh3"/>
+                        <outlet property="numberOfPinsLevelSix" destination="NDY-6o-Hqt" id="Icc-mP-fiX"/>
                         <outlet property="numberOfPinsLevelThree" destination="wWg-HV-n97" id="LMs-Hr-5rf"/>
                         <outlet property="numberOfPinsLevelTwo" destination="b6t-54-Whf" id="GK7-Q2-oNn"/>
                         <segue destination="adc-MU-rrM" kind="push" identifier="achievementsSegue" id="0xz-iu-kyh"/>
