@@ -71,6 +71,11 @@
 -(NSMutableArray*) getRoute
 {
     
+    self.locMgr = [[CLLocationManager alloc] init];
+    self.locMgr.distanceFilter = kCLDistanceFilterNone;
+    self.locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    
+   
     NSMutableArray * locations = [[NSMutableArray alloc] init];
     
     MKPointAnnotation *startPoint = [[MKPointAnnotation alloc] init];
