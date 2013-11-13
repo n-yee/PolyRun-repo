@@ -36,9 +36,9 @@ int numberOfPins;
 {
     [super viewDidLoad];
     [self.numberOfPins setScrollEnabled:YES];
-    [self.numberOfPins setContentSize: CGSizeMake(500, 100)];
+    [self.numberOfPins setContentSize: CGSizeMake(555, -65)];
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults boolForKey:@"numberOfPinsLevelOneStatus"]) [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsLevelOneSuccess.jpg"] forState:UIControlStateNormal];
+/*    if ([defaults boolForKey:@"numberOfPinsLevelOneStatus"]) [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsLevelOneSuccess.jpg"] forState:UIControlStateNormal];
     else [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];
     if ([defaults boolForKey:@"numberOfPinsLevelTwoStatus"]) [_numberOfPinsLevelTwo setImage:[UIImage imageNamed: @"numberOfPinsLevelTwoSuccess.jpg"] forState:UIControlStateNormal];
     else [_numberOfPinsLevelTwo setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];
@@ -49,7 +49,7 @@ int numberOfPins;
     if ([defaults boolForKey:@"numberOfPinsLevelFiveStatus"]) [_numberOfPinsLevelFive setImage:[UIImage imageNamed: @"numberOfPinsLevelFiveSuccess.jpg"] forState:UIControlStateNormal];
     else [_numberOfPinsLevelFive setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];
     if ([defaults boolForKey:@"numberOfPinsLevelSixStatus"]) [_numberOfPinsLevelSix setImage:[UIImage imageNamed: @"numberOfPinsLevelSixSuccess.jpg"] forState:UIControlStateNormal];
-    else [_numberOfPinsLevelSix setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelSix setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];*/
 	// Do any additional setup after loading the view.
 }
 
