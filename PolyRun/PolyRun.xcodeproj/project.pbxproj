@@ -8,6 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		704A668D18207E30007C1087 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704A668C18207E30007C1087 /* MapKit.framework */; };
+		B490D31318330B88008ADE77 /* Checkpoints 0.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2F418330B88008ADE77 /* Checkpoints 0.png */; };
+		B490D31418330B88008ADE77 /* Checkpoints 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2F518330B88008ADE77 /* Checkpoints 1.png */; };
+		B490D31518330B88008ADE77 /* Checkpoints 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2F618330B88008ADE77 /* Checkpoints 2.png */; };
+		B490D31618330B88008ADE77 /* Checkpoints 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2F718330B88008ADE77 /* Checkpoints 3.png */; };
+		B490D31718330B88008ADE77 /* Checkpoints 4.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2F818330B88008ADE77 /* Checkpoints 4.png */; };
+		B490D31818330B88008ADE77 /* Checkpoints 5.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2F918330B88008ADE77 /* Checkpoints 5.png */; };
+		B490D31918330B88008ADE77 /* Checkpoints 6.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2FA18330B88008ADE77 /* Checkpoints 6.png */; };
+		B490D31A18330B88008ADE77 /* Distance 0.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2FC18330B88008ADE77 /* Distance 0.png */; };
+		B490D31B18330B88008ADE77 /* Distance 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2FD18330B88008ADE77 /* Distance 1.png */; };
+		B490D31C18330B88008ADE77 /* Distance 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2FE18330B88008ADE77 /* Distance 2.png */; };
+		B490D31D18330B88008ADE77 /* Distance 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D2FF18330B88008ADE77 /* Distance 3.png */; };
+		B490D31E18330B88008ADE77 /* Distance 4.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30018330B88008ADE77 /* Distance 4.png */; };
+		B490D31F18330B88008ADE77 /* Distance 5.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30118330B88008ADE77 /* Distance 5.png */; };
+		B490D32018330B88008ADE77 /* Distance 6.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30218330B88008ADE77 /* Distance 6.png */; };
+		B490D32118330B88008ADE77 /* Persistence 0.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30418330B88008ADE77 /* Persistence 0.png */; };
+		B490D32218330B88008ADE77 /* Persistence 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30518330B88008ADE77 /* Persistence 1.png */; };
+		B490D32318330B88008ADE77 /* Persistence 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30618330B88008ADE77 /* Persistence 2.png */; };
+		B490D32418330B88008ADE77 /* Persistence 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30718330B88008ADE77 /* Persistence 3.png */; };
+		B490D32518330B88008ADE77 /* Persistence 4.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30818330B88008ADE77 /* Persistence 4.png */; };
+		B490D32618330B88008ADE77 /* Persistence 5.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30918330B88008ADE77 /* Persistence 5.png */; };
+		B490D32718330B88008ADE77 /* Persistence 6.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30A18330B88008ADE77 /* Persistence 6.png */; };
+		B490D32818330B88008ADE77 /* Runs 0.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30C18330B88008ADE77 /* Runs 0.png */; };
+		B490D32918330B88008ADE77 /* Runs 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30D18330B88008ADE77 /* Runs 1.png */; };
+		B490D32A18330B88008ADE77 /* Runs 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30E18330B88008ADE77 /* Runs 2.png */; };
+		B490D32B18330B88008ADE77 /* Runs 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D30F18330B88008ADE77 /* Runs 3.png */; };
+		B490D32C18330B88008ADE77 /* Runs 4.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D31018330B88008ADE77 /* Runs 4.png */; };
+		B490D32D18330B88008ADE77 /* Runs 5.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D31118330B88008ADE77 /* Runs 5.png */; };
+		B490D32E18330B88008ADE77 /* Runs 6.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D31218330B88008ADE77 /* Runs 6.png */; };
 		CF2C83A21819E5BC00C2C073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A11819E5BC00C2C073 /* Foundation.framework */; };
 		CF2C83A41819E5BC00C2C073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A31819E5BC00C2C073 /* CoreGraphics.framework */; };
 		CF2C83A61819E5BC00C2C073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A51819E5BC00C2C073 /* UIKit.framework */; };
@@ -39,6 +67,34 @@
 
 /* Begin PBXFileReference section */
 		704A668C18207E30007C1087 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B490D2F418330B88008ADE77 /* Checkpoints 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkpoints 0.png"; sourceTree = "<group>"; };
+		B490D2F518330B88008ADE77 /* Checkpoints 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkpoints 1.png"; sourceTree = "<group>"; };
+		B490D2F618330B88008ADE77 /* Checkpoints 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkpoints 2.png"; sourceTree = "<group>"; };
+		B490D2F718330B88008ADE77 /* Checkpoints 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkpoints 3.png"; sourceTree = "<group>"; };
+		B490D2F818330B88008ADE77 /* Checkpoints 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkpoints 4.png"; sourceTree = "<group>"; };
+		B490D2F918330B88008ADE77 /* Checkpoints 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkpoints 5.png"; sourceTree = "<group>"; };
+		B490D2FA18330B88008ADE77 /* Checkpoints 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkpoints 6.png"; sourceTree = "<group>"; };
+		B490D2FC18330B88008ADE77 /* Distance 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Distance 0.png"; sourceTree = "<group>"; };
+		B490D2FD18330B88008ADE77 /* Distance 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Distance 1.png"; sourceTree = "<group>"; };
+		B490D2FE18330B88008ADE77 /* Distance 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Distance 2.png"; sourceTree = "<group>"; };
+		B490D2FF18330B88008ADE77 /* Distance 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Distance 3.png"; sourceTree = "<group>"; };
+		B490D30018330B88008ADE77 /* Distance 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Distance 4.png"; sourceTree = "<group>"; };
+		B490D30118330B88008ADE77 /* Distance 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Distance 5.png"; sourceTree = "<group>"; };
+		B490D30218330B88008ADE77 /* Distance 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Distance 6.png"; sourceTree = "<group>"; };
+		B490D30418330B88008ADE77 /* Persistence 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Persistence 0.png"; sourceTree = "<group>"; };
+		B490D30518330B88008ADE77 /* Persistence 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Persistence 1.png"; sourceTree = "<group>"; };
+		B490D30618330B88008ADE77 /* Persistence 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Persistence 2.png"; sourceTree = "<group>"; };
+		B490D30718330B88008ADE77 /* Persistence 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Persistence 3.png"; sourceTree = "<group>"; };
+		B490D30818330B88008ADE77 /* Persistence 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Persistence 4.png"; sourceTree = "<group>"; };
+		B490D30918330B88008ADE77 /* Persistence 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Persistence 5.png"; sourceTree = "<group>"; };
+		B490D30A18330B88008ADE77 /* Persistence 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Persistence 6.png"; sourceTree = "<group>"; };
+		B490D30C18330B88008ADE77 /* Runs 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runs 0.png"; sourceTree = "<group>"; };
+		B490D30D18330B88008ADE77 /* Runs 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runs 1.png"; sourceTree = "<group>"; };
+		B490D30E18330B88008ADE77 /* Runs 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runs 2.png"; sourceTree = "<group>"; };
+		B490D30F18330B88008ADE77 /* Runs 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runs 3.png"; sourceTree = "<group>"; };
+		B490D31018330B88008ADE77 /* Runs 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runs 4.png"; sourceTree = "<group>"; };
+		B490D31118330B88008ADE77 /* Runs 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runs 5.png"; sourceTree = "<group>"; };
+		B490D31218330B88008ADE77 /* Runs 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Runs 6.png"; sourceTree = "<group>"; };
 		CF2C839E1819E5BC00C2C073 /* PolyRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2C83A11819E5BC00C2C073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF2C83A31819E5BC00C2C073 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,6 +146,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B490D2F218330B88008ADE77 /* Achievement Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B490D2F318330B88008ADE77 /* Checkpoints */,
+				B490D2FB18330B88008ADE77 /* Distance */,
+				B490D30318330B88008ADE77 /* Persistence */,
+				B490D30B18330B88008ADE77 /* Runs */,
+			);
+			path = "Achievement Icons";
+			sourceTree = "<group>";
+		};
+		B490D2F318330B88008ADE77 /* Checkpoints */ = {
+			isa = PBXGroup;
+			children = (
+				B490D2F418330B88008ADE77 /* Checkpoints 0.png */,
+				B490D2F518330B88008ADE77 /* Checkpoints 1.png */,
+				B490D2F618330B88008ADE77 /* Checkpoints 2.png */,
+				B490D2F718330B88008ADE77 /* Checkpoints 3.png */,
+				B490D2F818330B88008ADE77 /* Checkpoints 4.png */,
+				B490D2F918330B88008ADE77 /* Checkpoints 5.png */,
+				B490D2FA18330B88008ADE77 /* Checkpoints 6.png */,
+			);
+			path = Checkpoints;
+			sourceTree = "<group>";
+		};
+		B490D2FB18330B88008ADE77 /* Distance */ = {
+			isa = PBXGroup;
+			children = (
+				B490D2FC18330B88008ADE77 /* Distance 0.png */,
+				B490D2FD18330B88008ADE77 /* Distance 1.png */,
+				B490D2FE18330B88008ADE77 /* Distance 2.png */,
+				B490D2FF18330B88008ADE77 /* Distance 3.png */,
+				B490D30018330B88008ADE77 /* Distance 4.png */,
+				B490D30118330B88008ADE77 /* Distance 5.png */,
+				B490D30218330B88008ADE77 /* Distance 6.png */,
+			);
+			path = Distance;
+			sourceTree = "<group>";
+		};
+		B490D30318330B88008ADE77 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				B490D30418330B88008ADE77 /* Persistence 0.png */,
+				B490D30518330B88008ADE77 /* Persistence 1.png */,
+				B490D30618330B88008ADE77 /* Persistence 2.png */,
+				B490D30718330B88008ADE77 /* Persistence 3.png */,
+				B490D30818330B88008ADE77 /* Persistence 4.png */,
+				B490D30918330B88008ADE77 /* Persistence 5.png */,
+				B490D30A18330B88008ADE77 /* Persistence 6.png */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		B490D30B18330B88008ADE77 /* Runs */ = {
+			isa = PBXGroup;
+			children = (
+				B490D30C18330B88008ADE77 /* Runs 0.png */,
+				B490D30D18330B88008ADE77 /* Runs 1.png */,
+				B490D30E18330B88008ADE77 /* Runs 2.png */,
+				B490D30F18330B88008ADE77 /* Runs 3.png */,
+				B490D31018330B88008ADE77 /* Runs 4.png */,
+				B490D31118330B88008ADE77 /* Runs 5.png */,
+				B490D31218330B88008ADE77 /* Runs 6.png */,
+			);
+			path = Runs;
+			sourceTree = "<group>";
+		};
 		CF2C83951819E5BC00C2C073 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +266,7 @@
 		CF2C83A81819E5BC00C2C073 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B490D2F218330B88008ADE77 /* Achievement Icons */,
 				CF2C83A91819E5BC00C2C073 /* PolyRun-Info.plist */,
 				CF2C83AA1819E5BC00C2C073 /* InfoPlist.strings */,
 				CF2C83AD1819E5BC00C2C073 /* main.m */,
@@ -245,10 +369,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B490D32318330B88008ADE77 /* Persistence 2.png in Resources */,
+				B490D31E18330B88008ADE77 /* Distance 4.png in Resources */,
+				B490D32918330B88008ADE77 /* Runs 1.png in Resources */,
+				B490D32718330B88008ADE77 /* Persistence 6.png in Resources */,
+				B490D31A18330B88008ADE77 /* Distance 0.png in Resources */,
+				B490D32D18330B88008ADE77 /* Runs 5.png in Resources */,
+				B490D32218330B88008ADE77 /* Persistence 1.png in Resources */,
 				CF2C83B81819E5BC00C2C073 /* Main_iPad.storyboard in Resources */,
+				B490D31718330B88008ADE77 /* Checkpoints 4.png in Resources */,
+				B490D32818330B88008ADE77 /* Runs 0.png in Resources */,
+				B490D32618330B88008ADE77 /* Persistence 5.png in Resources */,
+				B490D32418330B88008ADE77 /* Persistence 3.png in Resources */,
+				B490D32C18330B88008ADE77 /* Runs 4.png in Resources */,
+				B490D31518330B88008ADE77 /* Checkpoints 2.png in Resources */,
+				B490D31618330B88008ADE77 /* Checkpoints 3.png in Resources */,
+				B490D32018330B88008ADE77 /* Distance 6.png in Resources */,
+				B490D31918330B88008ADE77 /* Checkpoints 6.png in Resources */,
+				B490D31C18330B88008ADE77 /* Distance 2.png in Resources */,
+				B490D31818330B88008ADE77 /* Checkpoints 5.png in Resources */,
+				B490D31F18330B88008ADE77 /* Distance 5.png in Resources */,
+				B490D32518330B88008ADE77 /* Persistence 4.png in Resources */,
+				B490D32A18330B88008ADE77 /* Runs 2.png in Resources */,
+				B490D32118330B88008ADE77 /* Persistence 0.png in Resources */,
 				CF2C83BD1819E5BC00C2C073 /* Images.xcassets in Resources */,
+				B490D31D18330B88008ADE77 /* Distance 3.png in Resources */,
+				B490D32B18330B88008ADE77 /* Runs 3.png in Resources */,
 				CF2C83B51819E5BC00C2C073 /* Main_iPhone.storyboard in Resources */,
+				B490D32E18330B88008ADE77 /* Runs 6.png in Resources */,
+				B490D31B18330B88008ADE77 /* Distance 1.png in Resources */,
 				CF2C83AC1819E5BC00C2C073 /* InfoPlist.strings in Resources */,
+				B490D31418330B88008ADE77 /* Checkpoints 1.png in Resources */,
+				B490D31318330B88008ADE77 /* Checkpoints 0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
