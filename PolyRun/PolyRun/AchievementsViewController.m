@@ -38,18 +38,18 @@ int numberOfPins;
     [self.numberOfPins setScrollEnabled:YES];
     [self.numberOfPins setContentSize: CGSizeMake(555, -65)];
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-/*    if ([defaults boolForKey:@"numberOfPinsLevelOneStatus"]) [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsLevelOneSuccess.jpg"] forState:UIControlStateNormal];
-    else [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"numberOfPinsLevelTwoStatus"]) [_numberOfPinsLevelTwo setImage:[UIImage imageNamed: @"numberOfPinsLevelTwoSuccess.jpg"] forState:UIControlStateNormal];
-    else [_numberOfPinsLevelTwo setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"numberOfPinsLevelThreeStatus"]) [_numberOfPinsLevelThree setImage:[UIImage imageNamed: @"numberOfPinsLevelThreeSuccess.jpg"] forState:UIControlStateNormal];
-    else [_numberOfPinsLevelThree setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"numberOfPinsLevelFourStatus"]) [_numberOfPinsLevelFour setImage:[UIImage imageNamed: @"numberOfPinsLevelFourSuccess.jpg"] forState:UIControlStateNormal];
-    else [_numberOfPinsLevelFour setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"numberOfPinsLevelFiveStatus"]) [_numberOfPinsLevelFive setImage:[UIImage imageNamed: @"numberOfPinsLevelFiveSuccess.jpg"] forState:UIControlStateNormal];
-    else [_numberOfPinsLevelFive setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"numberOfPinsLevelSixStatus"]) [_numberOfPinsLevelSix setImage:[UIImage imageNamed: @"numberOfPinsLevelSixSuccess.jpg"] forState:UIControlStateNormal];
-    else [_numberOfPinsLevelSix setImage:[UIImage imageNamed: @"numberOfPinsFail.jpg"] forState:UIControlStateNormal];*/
+    if ([defaults boolForKey:@"numberOfPinsLevelOneStatus"]) [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsLevelOneSuccess.png"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"numberOfPinsLevelTwoStatus"]) [_numberOfPinsLevelTwo setImage:[UIImage imageNamed: @"numberOfPinsLevelTwoSuccess.png"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelTwo setImage:[UIImage imageNamed: @"numberOfPinsFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"numberOfPinsLevelThreeStatus"]) [_numberOfPinsLevelThree setImage:[UIImage imageNamed: @"numberOfPinsLevelThreeSuccess.png"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelThree setImage:[UIImage imageNamed: @"numberOfPinsFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"numberOfPinsLevelFourStatus"]) [_numberOfPinsLevelFour setImage:[UIImage imageNamed: @"numberOfPinsLevelFourSuccess.png"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelFour setImage:[UIImage imageNamed: @"numberOfPinsFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"numberOfPinsLevelFiveStatus"]) [_numberOfPinsLevelFive setImage:[UIImage imageNamed: @"numberOfPinsLevelFiveSuccess.png"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelFive setImage:[UIImage imageNamed: @"numberOfPinsFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"numberOfPinsLevelSixStatus"]) [_numberOfPinsLevelSix setImage:[UIImage imageNamed: @"numberOfPinsLevelSixSuccess.png"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelSix setImage:[UIImage imageNamed: @"numberOfPinsFail.png"] forState:UIControlStateNormal];
 	// Do any additional setup after loading the view.
 }
 
