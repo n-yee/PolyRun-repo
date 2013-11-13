@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "pickerController.h"
 #import <MapKit/MapKit.h>
 
 
@@ -16,37 +15,34 @@
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
 @property (weak, nonatomic) IBOutlet UILabel *timer;
 @property NSUserDefaults *defaults;
-@property CLLocation *timerStartLoc;
 @property CLLocation *initialLoc;
 @property int seconds;
 @property int minutes;
 @property int hours;
 @property bool startTimer;
-
 @end
 
 
 @implementation ViewController
+//#define THE_SPAN 0.005f;
+<<<<<<< HEAD
+int seconds = 0;
+int minutes = 0;
+int hours = 0;
+=======
+>>>>>>> 1b812d39b7c45f45dd23f7ff9a93a14f17ba3028
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self initateZoom];
     
-    /*
     NSMutableArray *myRoute = [self getRoute];
+    
+    [self setRoute:myRoute];
 
-    pickerController *myPicker = [[pickerController alloc] init];
     
-    float miles_val = [myPicker.miles floatValue];
     
-    if (miles_val == 0) {
-        NSLog(@"There was a problem");
-    }
-    else {
-        [self setRoute:myRoute];
-    }
-    */
 }
 
 // start then locates user and places blue dot
@@ -95,8 +91,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *loc = [locations firstObject];
-    _initialLoc = loc;
-    //NSLog(@"lat: %lf, long: %lf, speed:%lf", loc.coordinate.latitude, loc.coordinate.longitude, loc.speed);
+    NSLog(@"lat: %lf, long: %lf, speed:%lf", loc.coordinate.latitude, loc.coordinate.longitude, loc.speed);
     
     if (self.alreadyZoomed == NO) {
         [self zoomToLocation:loc.coordinate];
@@ -105,7 +100,7 @@
     
     if (loc.speed > 0.5 && !_startTimer) {
         _startTimer = true;
-        _timerStartLoc = loc;
+        _initialLoc = loc;
     }
     
     
@@ -145,21 +140,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+<<<<<<< HEAD
+//timer counts up
+- (void) startTimer {
+    if (seconds <59) seconds++;
+    else if (seconds == 59 && minutes<59) {
+        minutes++;
+        seconds = 0;
+    }
+    else if (seconds == 59 && minutes == 59) {
+        hours++;
+        minutes = 0;
+        seconds = 0;
+    }
+    self.timer.text = [NSString stringWithFormat:@"%i, %i, %i", hours, minutes, seconds];
+}
+=======
+>>>>>>> 1b812d39b7c45f45dd23f7ff9a93a14f17ba3028
+
 -(NSMutableArray*) getRoute
 {
     
     NSMutableArray * locations = [[NSMutableArray alloc] init];
     
+    
     MKPointAnnotation *startPoint = [[MKPointAnnotation alloc] init];
     
-    CLLocationCoordinate2D startP;
-    startP.latitude = _locMgr.location.coordinate.latitude;
-    startP.longitude = _locMgr.location.coordinate.longitude;
+    CLLocationCoordinate2D coordStart;
+    coordStart.latitude = self.MapView.userLocation.location.coordinate.latitude;
+    coordStart.longitude= self.MapView.userLocation.location.coordinate.longitude;
     
-    startPoint.coordinate=startP;
+    startPoint.coordinate=coordStart;
     
-   [locations addObject:startPoint];
+    [locations addObject:startPoint];
     
     MKPointAnnotation *p1 = [[MKPointAnnotation alloc] init];
     
@@ -217,30 +230,26 @@
     
     return locations;
 }
-*/
+
 
 - (void) setRoute: (NSArray *) path
 {
     
-    CLLocationCoordinate2D coords[path.count +1];
-    
-    
+    CLLocationCoordinate2D coords[path.count];
     
     for (NSInteger i = 0; i < path.count; i++) {
         CLLocation *location = [path objectAtIndex:i];
         CLLocationCoordinate2D coordinate = location.coordinate;
         
-        
-        
         coords[i] = coordinate;
-        
-        NSLog(@"Long: %@ lat: %@", [NSString stringWithFormat: @"%g", coords[i].longitude], [NSString stringWithFormat: @"%g", coords[i].latitude]);
-        
     }
-
-    coords[path.count] = coords[0];
     
-    MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:path.count+1];
+    CLLocation *tmpLoc = [path objectAtIndex:path.count+1];
+    CLLocationCoordinate2D lastCoord = tmpLoc.coordinate;
+    
+    coords[path.count+1] = lastCoord;
+    
+    MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:path.count];
     
     self.MapView.delegate = self;
     
@@ -259,46 +268,7 @@
     
     return polylineView;
 }
-/*
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-{
-    MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
-    if (!pinView)
-        {
-    pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
-    pinView.pinColor = MKPinAnnotationColorPurple;
-        }
-    return pinView;
-}
- 
- 
- */
-- (double) round: (double) num
-{
-    if (num>=0) {
-        num+=0.5;
-        
-    }
-    else {
-        num-=0.5;
-    }
-    
-    double roundNum = num;
-    
-    return roundNum;
-    
-}
 
--(IBAction)unwindToRoutePicker:(UIStoryboardSegue *)sender
-{
-    
-   // pickerController *myPicker = [[pickerController alloc] initWithNibName:@"pickerController" bundle:nil];
-    
-    pickerController *myPicker = sender.sourceViewController;
-    
-      [self setRoute:myPicker.myRoute];
-    
-}
 
 
 @end

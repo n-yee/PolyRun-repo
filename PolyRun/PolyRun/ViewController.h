@@ -12,4 +12,9 @@
 @interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 @property CLLocationManager *locMgr;
 @property BOOL alreadyZoomed;
+
+- (void) setRoute: (NSArray *) path;
+
+//-(NSMutableArray*) getRoute;
+
 @end

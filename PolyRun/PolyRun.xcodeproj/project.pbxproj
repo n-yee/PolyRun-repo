@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		704718131832F7AB004F3FB4 /* pickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 704718121832F7AB004F3FB4 /* pickerController.m */; };
 		704A668D18207E30007C1087 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704A668C18207E30007C1087 /* MapKit.framework */; };
 		CF2C83A21819E5BC00C2C073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A11819E5BC00C2C073 /* Foundation.framework */; };
 		CF2C83A41819E5BC00C2C073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A31819E5BC00C2C073 /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		704718121832F7AB004F3FB4 /* pickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pickerController.m; sourceTree = "<group>"; };
+		704718161832F7C5004F3FB4 /* pickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pickerController.h; sourceTree = "<group>"; };
 		704A668C18207E30007C1087 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CF2C839E1819E5BC00C2C073 /* PolyRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2C83A11819E5BC00C2C073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				D2BA412E1829CD5B00FDA64D /* AchievementsViewController.h */,
 				D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */,
 				CF2C83B61819E5BC00C2C073 /* Main_iPad.storyboard */,
+				704718121832F7AB004F3FB4 /* pickerController.m */,
+				704718161832F7C5004F3FB4 /* pickerController.h */,
 				CF2C83B91819E5BC00C2C073 /* ViewController.h */,
 				CF2C83BA1819E5BC00C2C073 /* ViewController.m */,
 				CF2C83BC1819E5BC00C2C073 /* Images.xcassets */,
@@ -266,6 +271,7 @@
 				CF2C83B21819E5BC00C2C073 /* AppDelegate.m in Sources */,
 				D2BA41301829CD5B00FDA64D /* AchievementsViewController.m in Sources */,
 				CF2C83AE1819E5BC00C2C073 /* main.m in Sources */,
+				704718131832F7AB004F3FB4 /* pickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
