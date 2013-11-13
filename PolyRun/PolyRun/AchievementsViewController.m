@@ -34,6 +34,13 @@ int numberOfPins;
     [super viewDidLoad];
     [self.firstRow setScrollEnabled:YES];
     [self.firstRow setContentSize: CGSizeMake(500, 100)];
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:@"numberOfPinsLevelOneStatus"]) [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsLevelOneSuccess.jpg"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsLevelOneFail.jpg"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"numberOfPinsLevelTwoStatus"]) [_numberOfPinsLevelTwo setImage:[UIImage imageNamed: @"numberOfPinsLevelTwoSuccess.jpg"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelTwo setImage:[UIImage imageNamed: @"numberOfPinsLevelTwoFail.jpg"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"numberOfPinsLevelThreeStatus"]) [_numberOfPinsLevelThree setImage:[UIImage imageNamed: @"numberOfPinsLevelThreeSuccess.jpg"] forState:UIControlStateNormal];
+    else [_numberOfPinsLevelThree setImage:[UIImage imageNamed: @"numberOfPinsLevelThreeFail.jpg"] forState:UIControlStateNormal];
 	// Do any additional setup after loading the view.
 }
 
