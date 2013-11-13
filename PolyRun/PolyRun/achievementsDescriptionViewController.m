@@ -9,6 +9,8 @@
 #import "AchievementsDescriptionViewController.h"
 
 @interface AchievementsDescriptionViewController ()
+@property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;
+@property (weak, nonatomic) IBOutlet UIImageView *achievementPicture;
 
 @end
 
@@ -27,7 +29,9 @@
 {
     [super viewDidLoad];
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    
+    _navigationBar.title = [defaults objectForKey:@"achievementValue"];
+    if ([defaults boolForKey:[NSString stringWithFormat:@"%@Status", [defaults objectForKey:@"achievementValue"]]]) _achievementPicture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Success.png", [defaults objectForKey:@"achievementValue"]]];
+    else _achievementPicture.image = [UIImage imageNamed: @"numberOfPinsFail.png"];
 	// Do any additional setup after loading the view.
 }
 
