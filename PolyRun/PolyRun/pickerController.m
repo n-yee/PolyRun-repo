@@ -10,6 +10,10 @@
 #import "ViewController.h"
 
 
+@interface pickerController ()
+
+@end
+
 @implementation pickerController
 
 
@@ -361,7 +365,22 @@
 
 - (IBAction)runClicked:(UIButton *)sender
 {
-    _myRoute = [self getRouteHalfMile];
+    
+    
+    float myMiles = [_miles floatValue];
+    
+    if ( myMiles == 0.5) {
+        _myRoute = [self getRouteHalfMile];
+    }
+    else if ( myMiles > 0.5 && myMiles < 3.0) {
+        _myRoute = [self getRouteOneMile];
+    }
+    else {
+        _myRoute = [self getRouteThreeMile];
+    }
+    
+    
+    
     [self performSegueWithIdentifier:@"runClicked" sender:self];
 }
 

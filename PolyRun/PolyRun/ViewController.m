@@ -22,6 +22,7 @@
 @property int minutes;
 @property int hours;
 @property bool startTimer;
+@property (weak, nonatomic) IBOutlet UIButton *mileButton;
 
 @end
 
@@ -292,11 +293,14 @@
 -(IBAction)unwindToRoutePicker:(UIStoryboardSegue *)sender
 {
     
-   // pickerController *myPicker = [[pickerController alloc] initWithNibName:@"pickerController" bundle:nil];
+    // pickerController *myPicker = [[pickerController alloc] initWithNibName:@"pickerController" bundle:nil];
     
     pickerController *myPicker = sender.sourceViewController;
     
-      [self setRoute:myPicker.myRoute];
+    self.timer.hidden = NO;
+    self.mileButton.hidden = YES;
+    
+    [self setRoute:myPicker.myRoute];
     
 }
 
