@@ -33,7 +33,6 @@
 {
     [super viewDidLoad];
     [self initateZoom];
-    
     /*
     NSMutableArray *myRoute = [self getRoute];
 
