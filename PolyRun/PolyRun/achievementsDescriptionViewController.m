@@ -16,6 +16,7 @@
 
 @implementation AchievementsDescriptionViewController
 NSString * achievement;
+NSDictionary * titleLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,8 +31,12 @@ NSString * achievement;
 {
     [super viewDidLoad];
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    [titleLabel setValue: @"Total Distance Run" forKey:@"totalDistanc"];
+    [titleLabel setValue: @"Total Pins Reached" forKey: @"numberOfPins"];
+    [titleLabel setValue:@"Regular Visitor" forKey:@"keepVisiting"];
+    [titleLabel setValue:@"Total Number Of Runs" forKey:@"numberOfRuns"];
     achievement = [defaults objectForKey:@"achievementValue"];
-    _navigationBar.title = [defaults objectForKey:@"achievementValue"];
+    _navigationBar.title = [titleLabel objectForKey: [[defaults objectForKey:@"achievementValue"] substringToIndex:12]];
     if ([defaults boolForKey:[NSString stringWithFormat:@"%@Status", [defaults objectForKey:@"achievementValue"]]]) _achievementPicture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Success.png", achievement]];
     else _achievementPicture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Fail.png", [achievement substringToIndex:12]]];
 	// Do any additional setup after loading the view.
