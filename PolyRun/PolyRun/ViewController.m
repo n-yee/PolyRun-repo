@@ -289,9 +289,6 @@
     return roundNum;
     
 }
-- (IBAction)startTimer:(id)sender {
-    _startTimer = true;
-}
 
 -(IBAction)unwindToRoutePicker:(UIStoryboardSegue *)sender
 {
