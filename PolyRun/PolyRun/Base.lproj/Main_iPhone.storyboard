@@ -208,6 +208,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="swz-LG-Up3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Le-5M-6Mf">
                                         <rect key="frame" x="101" y="0.0" width="100" height="100"/>
@@ -217,6 +220,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="b8N-ov-j1e"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QsA-C4-Ejr">
                                         <rect key="frame" x="202" y="0.0" width="100" height="100"/>
@@ -226,6 +232,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="S3Z-F6-K2X"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q77-VC-eew">
                                         <rect key="frame" x="303" y="0.0" width="100" height="100"/>
@@ -235,6 +244,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="lth-Ub-gTU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FVR-yA-UmQ">
                                         <rect key="frame" x="404" y="0.0" width="100" height="100"/>
@@ -244,6 +256,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="q8l-fs-Fa5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UfQ-TQ-T1b">
                                         <rect key="frame" x="505" y="0.0" width="100" height="100"/>
@@ -253,6 +268,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="81g-N2-7g3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>
@@ -268,6 +286,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="Bus-iz-GOs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wVE-ZI-KEA">
                                         <rect key="frame" x="101" y="0.0" width="100" height="100"/>
@@ -277,6 +298,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="HOA-Ia-Frt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iuB-Wu-SvU">
                                         <rect key="frame" x="202" y="0.0" width="100" height="100"/>
@@ -286,6 +310,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="ZPW-sc-oMz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HZC-XL-44M">
                                         <rect key="frame" x="303" y="0.0" width="100" height="100"/>
@@ -295,6 +322,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="T7M-F0-jb1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wyQ-ib-Qgg">
                                         <rect key="frame" x="404" y="0.0" width="100" height="100"/>
@@ -304,6 +334,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="kig-fb-hnH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="B7h-2Y-akg">
                                         <rect key="frame" x="505" y="0.0" width="100" height="100"/>
@@ -313,6 +346,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="D6p-4U-fnT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>
@@ -328,6 +364,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="l7O-wd-FHM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h6b-AK-rFI">
                                         <rect key="frame" x="101" y="0.0" width="100" height="100"/>
@@ -337,6 +376,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="KnQ-Nl-RiJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tcL-mM-Cmd">
                                         <rect key="frame" x="202" y="0.0" width="100" height="100"/>
@@ -346,6 +388,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="jC1-oS-7tY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YOP-6Q-jed">
                                         <rect key="frame" x="303" y="0.0" width="100" height="100"/>
@@ -355,6 +400,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="X6r-df-SrQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qgX-Dm-v1u">
                                         <rect key="frame" x="404" y="0.0" width="100" height="100"/>
@@ -364,6 +412,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="YRC-xU-uzW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GpS-jG-nIK">
                                         <rect key="frame" x="505" y="0.0" width="100" height="100"/>
@@ -373,6 +424,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="2gE-uS-at4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>
@@ -388,6 +442,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="94j-fI-vIn">
+                                <rect key="frame" x="102" y="538" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back To Running">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="lxu-no-VW7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
