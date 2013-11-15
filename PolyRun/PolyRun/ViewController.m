@@ -125,7 +125,7 @@
             _minutes = 0;
         }
         
-        self.timer.text = [NSString stringWithFormat:@"%i, %i, %i", _hours, _minutes, _seconds];
+        self.timer.text = [NSString stringWithFormat:@"%02d: %02d: %02d", _hours, _minutes, _seconds];
     }
     else if (loc.speed > 6) {
         self.timer.text = @"Cheater.";
@@ -288,6 +288,9 @@
     
     return roundNum;
     
+}
+- (IBAction)startTimer:(id)sender {
+    _startTimer = true;
 }
 
 -(IBAction)unwindToRoutePicker:(UIStoryboardSegue *)sender
