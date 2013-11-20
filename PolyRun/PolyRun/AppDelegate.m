@@ -14,6 +14,9 @@
 {
     // Override point for customization after application launch.
     return YES;
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger: [defaults integerForKey:@"keepVisiting"]+1 forKey: @"keepVisiting"];
+    [defaults synchronize];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
