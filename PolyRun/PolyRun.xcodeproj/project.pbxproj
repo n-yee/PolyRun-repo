@@ -37,6 +37,28 @@
 		B490D32C18330B88008ADE77 /* numberOfRunsLevelFourSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D31018330B88008ADE77 /* numberOfRunsLevelFourSuccess.png */; };
 		B490D32D18330B88008ADE77 /* numberOfRunsLevelFiveSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D31118330B88008ADE77 /* numberOfRunsLevelFiveSuccess.png */; };
 		B490D32E18330B88008ADE77 /* numberOfRunsLevelSixSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = B490D31218330B88008ADE77 /* numberOfRunsLevelSixSuccess.png */; };
+		B49EBD46183C41ED00F0A204 /* numberOfPinsLevelFour.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD2D183C41ED00F0A204 /* numberOfPinsLevelFour.txt */; };
+		B49EBD47183C41ED00F0A204 /* numberOfPinsLevelOne.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD2E183C41ED00F0A204 /* numberOfPinsLevelOne.txt */; };
+		B49EBD48183C41ED00F0A204 /* numberOfPinsLevelThree.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD2F183C41ED00F0A204 /* numberOfPinsLevelThree.txt */; };
+		B49EBD49183C41ED00F0A204 /* numberOfPinsLevelTwo.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD30183C41ED00F0A204 /* numberOfPinsLevelTwo.txt */; };
+		B49EBD4A183C41ED00F0A204 /* totalDistanceLevelFive.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD32183C41ED00F0A204 /* totalDistanceLevelFive.txt */; };
+		B49EBD4B183C41ED00F0A204 /* totalDistanceLevelFour.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD33183C41ED00F0A204 /* totalDistanceLevelFour.txt */; };
+		B49EBD4C183C41ED00F0A204 /* totalDistanceLevelOne.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD34183C41ED00F0A204 /* totalDistanceLevelOne.txt */; };
+		B49EBD4D183C41ED00F0A204 /* totalDistanceLevelSix.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD35183C41ED00F0A204 /* totalDistanceLevelSix.txt */; };
+		B49EBD4E183C41ED00F0A204 /* totalDistanceLevelThree.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD36183C41ED00F0A204 /* totalDistanceLevelThree.txt */; };
+		B49EBD4F183C41ED00F0A204 /* totalDistanceLevelTwo.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD37183C41ED00F0A204 /* totalDistanceLevelTwo.txt */; };
+		B49EBD50183C41ED00F0A204 /* keepVisitingLevelFive.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD39183C41ED00F0A204 /* keepVisitingLevelFive.txt */; };
+		B49EBD51183C41ED00F0A204 /* keepVisitingLevelFour.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD3A183C41ED00F0A204 /* keepVisitingLevelFour.txt */; };
+		B49EBD52183C41ED00F0A204 /* keepVisitingLevelOne.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD3B183C41ED00F0A204 /* keepVisitingLevelOne.txt */; };
+		B49EBD53183C41ED00F0A204 /* keepVisitingLevelSix.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD3C183C41ED00F0A204 /* keepVisitingLevelSix.txt */; };
+		B49EBD54183C41ED00F0A204 /* keepVisitingLevelThree.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD3D183C41ED00F0A204 /* keepVisitingLevelThree.txt */; };
+		B49EBD55183C41ED00F0A204 /* keepVisitingLevelTwo.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD3E183C41ED00F0A204 /* keepVisitingLevelTwo.txt */; };
+		B49EBD56183C41ED00F0A204 /* numberOfRunsLevelFive.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD40183C41ED00F0A204 /* numberOfRunsLevelFive.txt */; };
+		B49EBD57183C41ED00F0A204 /* numberOfRunsLevelFour.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD41183C41ED00F0A204 /* numberOfRunsLevelFour.txt */; };
+		B49EBD58183C41ED00F0A204 /* numberOfRunsLevelOne.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD42183C41ED00F0A204 /* numberOfRunsLevelOne.txt */; };
+		B49EBD59183C41ED00F0A204 /* numberOfRunsLevelSix.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD43183C41ED00F0A204 /* numberOfRunsLevelSix.txt */; };
+		B49EBD5A183C41ED00F0A204 /* numberOfRunsLevelThree.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD44183C41ED00F0A204 /* numberOfRunsLevelThree.txt */; };
+		B49EBD5B183C41ED00F0A204 /* numberOfRunsLevelTwo.txt in Resources */ = {isa = PBXBuildFile; fileRef = B49EBD45183C41ED00F0A204 /* numberOfRunsLevelTwo.txt */; };
 		CF2C83A21819E5BC00C2C073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A11819E5BC00C2C073 /* Foundation.framework */; };
 		CF2C83A41819E5BC00C2C073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A31819E5BC00C2C073 /* CoreGraphics.framework */; };
 		CF2C83A61819E5BC00C2C073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83A51819E5BC00C2C073 /* UIKit.framework */; };
@@ -98,6 +120,28 @@
 		B490D31018330B88008ADE77 /* numberOfRunsLevelFourSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberOfRunsLevelFourSuccess.png; sourceTree = "<group>"; };
 		B490D31118330B88008ADE77 /* numberOfRunsLevelFiveSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberOfRunsLevelFiveSuccess.png; sourceTree = "<group>"; };
 		B490D31218330B88008ADE77 /* numberOfRunsLevelSixSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberOfRunsLevelSixSuccess.png; sourceTree = "<group>"; };
+		B49EBD2D183C41ED00F0A204 /* numberOfPinsLevelFour.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfPinsLevelFour.txt; sourceTree = "<group>"; };
+		B49EBD2E183C41ED00F0A204 /* numberOfPinsLevelOne.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfPinsLevelOne.txt; sourceTree = "<group>"; };
+		B49EBD2F183C41ED00F0A204 /* numberOfPinsLevelThree.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfPinsLevelThree.txt; sourceTree = "<group>"; };
+		B49EBD30183C41ED00F0A204 /* numberOfPinsLevelTwo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfPinsLevelTwo.txt; sourceTree = "<group>"; };
+		B49EBD32183C41ED00F0A204 /* totalDistanceLevelFive.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = totalDistanceLevelFive.txt; sourceTree = "<group>"; };
+		B49EBD33183C41ED00F0A204 /* totalDistanceLevelFour.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = totalDistanceLevelFour.txt; sourceTree = "<group>"; };
+		B49EBD34183C41ED00F0A204 /* totalDistanceLevelOne.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = totalDistanceLevelOne.txt; sourceTree = "<group>"; };
+		B49EBD35183C41ED00F0A204 /* totalDistanceLevelSix.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = totalDistanceLevelSix.txt; sourceTree = "<group>"; };
+		B49EBD36183C41ED00F0A204 /* totalDistanceLevelThree.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = totalDistanceLevelThree.txt; sourceTree = "<group>"; };
+		B49EBD37183C41ED00F0A204 /* totalDistanceLevelTwo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = totalDistanceLevelTwo.txt; sourceTree = "<group>"; };
+		B49EBD39183C41ED00F0A204 /* keepVisitingLevelFive.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keepVisitingLevelFive.txt; sourceTree = "<group>"; };
+		B49EBD3A183C41ED00F0A204 /* keepVisitingLevelFour.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keepVisitingLevelFour.txt; sourceTree = "<group>"; };
+		B49EBD3B183C41ED00F0A204 /* keepVisitingLevelOne.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keepVisitingLevelOne.txt; sourceTree = "<group>"; };
+		B49EBD3C183C41ED00F0A204 /* keepVisitingLevelSix.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keepVisitingLevelSix.txt; sourceTree = "<group>"; };
+		B49EBD3D183C41ED00F0A204 /* keepVisitingLevelThree.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keepVisitingLevelThree.txt; sourceTree = "<group>"; };
+		B49EBD3E183C41ED00F0A204 /* keepVisitingLevelTwo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keepVisitingLevelTwo.txt; sourceTree = "<group>"; };
+		B49EBD40183C41ED00F0A204 /* numberOfRunsLevelFive.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfRunsLevelFive.txt; sourceTree = "<group>"; };
+		B49EBD41183C41ED00F0A204 /* numberOfRunsLevelFour.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfRunsLevelFour.txt; sourceTree = "<group>"; };
+		B49EBD42183C41ED00F0A204 /* numberOfRunsLevelOne.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfRunsLevelOne.txt; sourceTree = "<group>"; };
+		B49EBD43183C41ED00F0A204 /* numberOfRunsLevelSix.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfRunsLevelSix.txt; sourceTree = "<group>"; };
+		B49EBD44183C41ED00F0A204 /* numberOfRunsLevelThree.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfRunsLevelThree.txt; sourceTree = "<group>"; };
+		B49EBD45183C41ED00F0A204 /* numberOfRunsLevelTwo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = numberOfRunsLevelTwo.txt; sourceTree = "<group>"; };
 		CF2C839E1819E5BC00C2C073 /* PolyRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2C83A11819E5BC00C2C073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF2C83A31819E5BC00C2C073 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -216,6 +260,67 @@
 			path = Runs;
 			sourceTree = "<group>";
 		};
+		B49EBD2B183C41ED00F0A204 /* Achievement Descriptions */ = {
+			isa = PBXGroup;
+			children = (
+				B49EBD2C183C41ED00F0A204 /* Checkpoints */,
+				B49EBD31183C41ED00F0A204 /* Distance */,
+				B49EBD38183C41ED00F0A204 /* Persistence */,
+				B49EBD3F183C41ED00F0A204 /* Runs */,
+			);
+			path = "Achievement Descriptions";
+			sourceTree = "<group>";
+		};
+		B49EBD2C183C41ED00F0A204 /* Checkpoints */ = {
+			isa = PBXGroup;
+			children = (
+				B49EBD2D183C41ED00F0A204 /* numberOfPinsLevelFour.txt */,
+				B49EBD2E183C41ED00F0A204 /* numberOfPinsLevelOne.txt */,
+				B49EBD2F183C41ED00F0A204 /* numberOfPinsLevelThree.txt */,
+				B49EBD30183C41ED00F0A204 /* numberOfPinsLevelTwo.txt */,
+			);
+			path = Checkpoints;
+			sourceTree = "<group>";
+		};
+		B49EBD31183C41ED00F0A204 /* Distance */ = {
+			isa = PBXGroup;
+			children = (
+				B49EBD32183C41ED00F0A204 /* totalDistanceLevelFive.txt */,
+				B49EBD33183C41ED00F0A204 /* totalDistanceLevelFour.txt */,
+				B49EBD34183C41ED00F0A204 /* totalDistanceLevelOne.txt */,
+				B49EBD35183C41ED00F0A204 /* totalDistanceLevelSix.txt */,
+				B49EBD36183C41ED00F0A204 /* totalDistanceLevelThree.txt */,
+				B49EBD37183C41ED00F0A204 /* totalDistanceLevelTwo.txt */,
+			);
+			path = Distance;
+			sourceTree = "<group>";
+		};
+		B49EBD38183C41ED00F0A204 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				B49EBD39183C41ED00F0A204 /* keepVisitingLevelFive.txt */,
+				B49EBD3A183C41ED00F0A204 /* keepVisitingLevelFour.txt */,
+				B49EBD3B183C41ED00F0A204 /* keepVisitingLevelOne.txt */,
+				B49EBD3C183C41ED00F0A204 /* keepVisitingLevelSix.txt */,
+				B49EBD3D183C41ED00F0A204 /* keepVisitingLevelThree.txt */,
+				B49EBD3E183C41ED00F0A204 /* keepVisitingLevelTwo.txt */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		B49EBD3F183C41ED00F0A204 /* Runs */ = {
+			isa = PBXGroup;
+			children = (
+				B49EBD40183C41ED00F0A204 /* numberOfRunsLevelFive.txt */,
+				B49EBD41183C41ED00F0A204 /* numberOfRunsLevelFour.txt */,
+				B49EBD42183C41ED00F0A204 /* numberOfRunsLevelOne.txt */,
+				B49EBD43183C41ED00F0A204 /* numberOfRunsLevelSix.txt */,
+				B49EBD44183C41ED00F0A204 /* numberOfRunsLevelThree.txt */,
+				B49EBD45183C41ED00F0A204 /* numberOfRunsLevelTwo.txt */,
+			);
+			path = Runs;
+			sourceTree = "<group>";
+		};
 		CF2C83951819E5BC00C2C073 = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +376,7 @@
 		CF2C83A81819E5BC00C2C073 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B49EBD2B183C41ED00F0A204 /* Achievement Descriptions */,
 				B490D2F218330B88008ADE77 /* Achievement Icons */,
 				CF2C83A91819E5BC00C2C073 /* PolyRun-Info.plist */,
 				CF2C83AA1819E5BC00C2C073 /* InfoPlist.strings */,
@@ -375,35 +481,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				B490D32318330B88008ADE77 /* keepVisitingLevelTwoSuccess.png in Resources */,
+				B49EBD51183C41ED00F0A204 /* keepVisitingLevelFour.txt in Resources */,
+				B49EBD46183C41ED00F0A204 /* numberOfPinsLevelFour.txt in Resources */,
+				B49EBD5A183C41ED00F0A204 /* numberOfRunsLevelThree.txt in Resources */,
+				B49EBD4F183C41ED00F0A204 /* totalDistanceLevelTwo.txt in Resources */,
 				B490D31E18330B88008ADE77 /* totalDistanceLevelFourSuccess.png in Resources */,
+				B49EBD56183C41ED00F0A204 /* numberOfRunsLevelFive.txt in Resources */,
 				B490D32918330B88008ADE77 /* numberOfRunsLevelOneSuccess.png in Resources */,
 				B490D32718330B88008ADE77 /* keepVisitingLevelSixSuccess.png in Resources */,
 				B490D31A18330B88008ADE77 /* totalDistancFail.png in Resources */,
 				B490D32D18330B88008ADE77 /* numberOfRunsLevelFiveSuccess.png in Resources */,
+				B49EBD52183C41ED00F0A204 /* keepVisitingLevelOne.txt in Resources */,
+				B49EBD55183C41ED00F0A204 /* keepVisitingLevelTwo.txt in Resources */,
 				B490D32218330B88008ADE77 /* keepVisitingLevelOneSuccess.png in Resources */,
 				CF2C83B81819E5BC00C2C073 /* Main_iPad.storyboard in Resources */,
 				B490D31718330B88008ADE77 /* numberOfPinsLevelFourSuccess.png in Resources */,
+				B49EBD4D183C41ED00F0A204 /* totalDistanceLevelSix.txt in Resources */,
+				B49EBD47183C41ED00F0A204 /* numberOfPinsLevelOne.txt in Resources */,
 				B490D32818330B88008ADE77 /* numberOfRunsFail.png in Resources */,
 				B490D32618330B88008ADE77 /* keepVisitingLevelFiveSuccess.png in Resources */,
+				B49EBD5B183C41ED00F0A204 /* numberOfRunsLevelTwo.txt in Resources */,
 				B490D32418330B88008ADE77 /* keepVisitingLevelThreeSuccess.png in Resources */,
 				B490D32C18330B88008ADE77 /* numberOfRunsLevelFourSuccess.png in Resources */,
 				B490D31518330B88008ADE77 /* numberOfPinsLevelTwoSuccess.png in Resources */,
 				B490D31618330B88008ADE77 /* numberOfPinsLevelThreeSuccess.png in Resources */,
+				B49EBD4B183C41ED00F0A204 /* totalDistanceLevelFour.txt in Resources */,
+				B49EBD50183C41ED00F0A204 /* keepVisitingLevelFive.txt in Resources */,
 				B490D32018330B88008ADE77 /* totalDistanceLevelSixSuccess.png in Resources */,
 				B490D31918330B88008ADE77 /* numberOfPinsLevelSixSuccess.png in Resources */,
 				B490D31C18330B88008ADE77 /* totalDistanceLevelTwoSuccess.png in Resources */,
+				B49EBD49183C41ED00F0A204 /* numberOfPinsLevelTwo.txt in Resources */,
+				B49EBD4C183C41ED00F0A204 /* totalDistanceLevelOne.txt in Resources */,
 				B490D31818330B88008ADE77 /* numberOfPinsLevelFiveSuccess.png in Resources */,
 				B490D31F18330B88008ADE77 /* totalDistanceLevelFiveSuccess.png in Resources */,
 				B490D32518330B88008ADE77 /* keepVisitingLevelFourSuccess.png in Resources */,
+				B49EBD4E183C41ED00F0A204 /* totalDistanceLevelThree.txt in Resources */,
+				B49EBD58183C41ED00F0A204 /* numberOfRunsLevelOne.txt in Resources */,
 				B490D32A18330B88008ADE77 /* numberOfRunsLevelTwoSuccess.png in Resources */,
+				B49EBD59183C41ED00F0A204 /* numberOfRunsLevelSix.txt in Resources */,
 				B490D32118330B88008ADE77 /* keepVisitingFail.png in Resources */,
+				B49EBD54183C41ED00F0A204 /* keepVisitingLevelThree.txt in Resources */,
 				CF2C83BD1819E5BC00C2C073 /* Images.xcassets in Resources */,
 				B490D31D18330B88008ADE77 /* totalDistanceLevelThreeSuccess.png in Resources */,
 				B490D32B18330B88008ADE77 /* numberOfRunsLevelThreeSuccess.png in Resources */,
 				CF2C83B51819E5BC00C2C073 /* Main_iPhone.storyboard in Resources */,
+				B49EBD48183C41ED00F0A204 /* numberOfPinsLevelThree.txt in Resources */,
+				B49EBD4A183C41ED00F0A204 /* totalDistanceLevelFive.txt in Resources */,
+				B49EBD53183C41ED00F0A204 /* keepVisitingLevelSix.txt in Resources */,
 				B490D32E18330B88008ADE77 /* numberOfRunsLevelSixSuccess.png in Resources */,
 				B490D31B18330B88008ADE77 /* totalDistanceLevelOneSuccess.png in Resources */,
 				CF2C83AC1819E5BC00C2C073 /* InfoPlist.strings in Resources */,
+				B49EBD57183C41ED00F0A204 /* numberOfRunsLevelFour.txt in Resources */,
 				B490D31418330B88008ADE77 /* numberOfPinsLevelOneSuccess.png in Resources */,
 				B490D31318330B88008ADE77 /* numberOfPinsFail.png in Resources */,
 			);

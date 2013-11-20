@@ -1,0 +1,1 @@
+Run past half of all checkpoints.
