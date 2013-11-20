@@ -534,6 +534,7 @@
                     <navigationItem key="navigationItem" id="htS-d5-pMa"/>
                     <connections>
                         <outlet property="achievementPicture" destination="9Kc-Jx-x67" id="dLG-4q-5Oz"/>
+                        <outlet property="descriptionBox" destination="6Ai-Lw-Tu0" id="kSt-qV-4Be"/>
                         <outlet property="navigationBar" destination="htS-d5-pMa" id="6js-5N-rLj"/>
                     </connections>
                 </viewController>
