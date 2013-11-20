@@ -119,7 +119,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b6t-54-Whf">
-                                        <rect key="frame" x="101" y="-65" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="-65" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfPinsLevelTwo">
@@ -131,7 +131,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wWg-HV-n97">
-                                        <rect key="frame" x="202" y="-65" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="-65" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfPinsLevelThree">
@@ -143,7 +143,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f29-4v-iaJ">
-                                        <rect key="frame" x="303" y="-65" width="100" height="100"/>
+                                        <rect key="frame" x="330" y="-65" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfPinsLevelFour">
@@ -152,30 +152,6 @@
                                         </state>
                                         <connections>
                                             <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="KHY-Gu-3ER"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8Iw-ku-CVb">
-                                        <rect key="frame" x="404" y="-65" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="numberOfPinsLevelFive">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="vWI-b9-HOZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NDY-6o-Hqt">
-                                        <rect key="frame" x="505" y="-65" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="numberOfPinsLevelSix">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="43W-EN-yoz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -197,7 +173,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Le-5M-6Mf">
-                                        <rect key="frame" x="101" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="totalDistanceLevelTwo">
@@ -209,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QsA-C4-Ejr">
-                                        <rect key="frame" x="202" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="totalDistanceLevelThree">
@@ -221,7 +197,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q77-VC-eew">
-                                        <rect key="frame" x="303" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="330" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="totalDistanceLevelFour">
@@ -233,7 +209,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FVR-yA-UmQ">
-                                        <rect key="frame" x="404" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="440" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="totalDistanceLevelFive">
@@ -245,7 +221,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UfQ-TQ-T1b">
-                                        <rect key="frame" x="505" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="550" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="totalDistanceLevelSix">
@@ -275,7 +251,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wVE-ZI-KEA">
-                                        <rect key="frame" x="101" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelTwo">
@@ -287,7 +263,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iuB-Wu-SvU">
-                                        <rect key="frame" x="202" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelThree">
@@ -299,7 +275,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HZC-XL-44M">
-                                        <rect key="frame" x="303" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="330" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelFour">
@@ -311,7 +287,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wyQ-ib-Qgg">
-                                        <rect key="frame" x="404" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="440" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelFive">
@@ -323,7 +299,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="B7h-2Y-akg">
-                                        <rect key="frame" x="505" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="550" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelSix">
@@ -353,7 +329,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h6b-AK-rFI">
-                                        <rect key="frame" x="101" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelTwo">
@@ -365,7 +341,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tcL-mM-Cmd">
-                                        <rect key="frame" x="202" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelThree">
@@ -377,7 +353,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YOP-6Q-jed">
-                                        <rect key="frame" x="303" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="330" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelFour">
@@ -389,7 +365,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qgX-Dm-v1u">
-                                        <rect key="frame" x="404" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="440" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelFive">
@@ -401,7 +377,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GpS-jG-nIK">
-                                        <rect key="frame" x="505" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="550" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelSix">
@@ -437,10 +413,8 @@
                         <outlet property="keepVisitingLevelThree" destination="tcL-mM-Cmd" id="6Au-vI-Dtv"/>
                         <outlet property="keepVisitingLevelTwo" destination="h6b-AK-rFI" id="LSY-AV-Y77"/>
                         <outlet property="numberOfPins" destination="lLr-AU-BXP" id="CeC-tu-5vX"/>
-                        <outlet property="numberOfPinsLevelFive" destination="8Iw-ku-CVb" id="Mu9-IE-qPa"/>
                         <outlet property="numberOfPinsLevelFour" destination="f29-4v-iaJ" id="HqV-VF-5Cf"/>
                         <outlet property="numberOfPinsLevelOne" destination="NP9-wl-gg0" id="gcI-s1-Zh3"/>
-                        <outlet property="numberOfPinsLevelSix" destination="NDY-6o-Hqt" id="Icc-mP-fiX"/>
                         <outlet property="numberOfPinsLevelThree" destination="wWg-HV-n97" id="LMs-Hr-5rf"/>
                         <outlet property="numberOfPinsLevelTwo" destination="b6t-54-Whf" id="GK7-Q2-oNn"/>
                         <outlet property="numberOfRuns" destination="wA6-75-hqx" id="g0G-U7-Mrv"/>

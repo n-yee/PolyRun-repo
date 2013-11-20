@@ -61,10 +61,10 @@ int numberOfPins;
     [self.totalDistance setScrollEnabled:YES];
     [self.numberOfRuns setScrollEnabled:YES];
     [self.keepVisiting setScrollEnabled:YES];
-    [self.numberOfPins setContentSize: CGSizeMake(605, -65)];
-    [self.totalDistance setContentSize: CGSizeMake (605, 100)];
-    [self.numberOfRuns setContentSize: CGSizeMake (605, 100)];
-    [self.keepVisiting setContentSize: CGSizeMake (605, 100)];
+    [self.numberOfPins setContentSize: CGSizeMake(430, -65)];
+    [self.totalDistance setContentSize: CGSizeMake (650, 100)];
+    [self.numberOfRuns setContentSize: CGSizeMake (650, 100)];
+    [self.keepVisiting setContentSize: CGSizeMake (650, 100)];
     [self updateAchievements];
 	// Do any additional setup after loading the view.
 }
