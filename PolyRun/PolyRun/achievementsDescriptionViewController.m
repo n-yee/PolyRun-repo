@@ -42,7 +42,7 @@ NSString * achievement;
     _navigationBar.title = [titleLabel objectForKey: twelveLetterAchievement];
     if ([defaults boolForKey:[NSString stringWithFormat:@"%@Status", [defaults objectForKey:@"achievementValue"]]]) _achievementPicture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Success.png", achievement]];
     else _achievementPicture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Fail.png", [achievement substringToIndex:12]]];
-    _descriptionBox.text = [NSString stringWithContentsOfFile:[mainBundle pathForResource:twelveLetterAchievement ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+    _descriptionBox.text = [NSString stringWithContentsOfFile:[mainBundle pathForResource:achievement ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
 	// Do any additional setup after loading the view.
 }
 

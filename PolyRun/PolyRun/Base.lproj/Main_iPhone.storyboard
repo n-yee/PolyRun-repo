@@ -180,22 +180,6 @@
                                     </button>
                                 </subviews>
                             </scrollView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pins" minimumFontSize="17" id="TNx-KY-EHy">
-                                <rect key="frame" x="0.0" y="488" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kYh-yS-o1X">
-                                <rect key="frame" x="95" y="518" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Refresh Counts">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="refreshPinCount:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="QOM-F5-sHJ"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="xNp-U9-zQe">
                                 <rect key="frame" x="0.0" y="170" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -430,20 +414,8 @@
                                     </button>
                                 </subviews>
                             </scrollView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance" minimumFontSize="17" id="6B0-cV-HCK">
-                                <rect key="frame" x="95" y="488" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Runs" minimumFontSize="17" id="IKU-CQ-AxI">
-                                <rect key="frame" x="203" y="488" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="94j-fI-vIn">
-                                <rect key="frame" x="102" y="538" width="116" height="30"/>
+                                <rect key="frame" x="102" y="507" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back To Running">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -465,7 +437,6 @@
                         <outlet property="keepVisitingLevelThree" destination="tcL-mM-Cmd" id="6Au-vI-Dtv"/>
                         <outlet property="keepVisitingLevelTwo" destination="h6b-AK-rFI" id="LSY-AV-Y77"/>
                         <outlet property="numberOfPins" destination="lLr-AU-BXP" id="CeC-tu-5vX"/>
-                        <outlet property="numberOfPinsAchieved" destination="TNx-KY-EHy" id="ZBg-fs-9E4"/>
                         <outlet property="numberOfPinsLevelFive" destination="8Iw-ku-CVb" id="Mu9-IE-qPa"/>
                         <outlet property="numberOfPinsLevelFour" destination="f29-4v-iaJ" id="HqV-VF-5Cf"/>
                         <outlet property="numberOfPinsLevelOne" destination="NP9-wl-gg0" id="gcI-s1-Zh3"/>

@@ -189,10 +189,5 @@ int numberOfPins;
     if ([defaults boolForKey:@"keepVisitingLevelSixStatus"]) [_keepVisitingLevelSix setImage:[UIImage imageNamed: @"keepVisitingLevelSixSuccess.png"] forState:UIControlStateNormal];
     else [_keepVisitingLevelSix setImage:[UIImage imageNamed: @"keepVisitingFail.png"] forState:UIControlStateNormal];
 }
-- (IBAction)refreshPinCount:(id)sender {
-    numberOfPins = [_numberOfPinsAchieved.text intValue];
-    [self updateAchievements];
-}
-
 
 @end
