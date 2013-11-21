@@ -14,12 +14,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *numberOfPinsLevelTwo;
 @property (weak, nonatomic) IBOutlet UIButton *numberOfPinsLevelThree;
 @property (weak, nonatomic) IBOutlet UIButton *numberOfPinsLevelFour;
-@property (weak, nonatomic) IBOutlet UIButton *totalDistanceLevelOne;
-@property (weak, nonatomic) IBOutlet UIButton *totalDistanceLevelTwo;
-@property (weak, nonatomic) IBOutlet UIButton *totalDistanceLevelThree;
-@property (weak, nonatomic) IBOutlet UIButton *totalDistanceLevelFour;
-@property (weak, nonatomic) IBOutlet UIButton *totalDistanceLevelFive;
-@property (weak, nonatomic) IBOutlet UIButton *totalDistanceLevelSix;
+@property (weak, nonatomic) IBOutlet UIButton *totalDistancLevelOne;
+@property (weak, nonatomic) IBOutlet UIButton *totalDistancLevelTwo;
+@property (weak, nonatomic) IBOutlet UIButton *totalDistancLevelThree;
+@property (weak, nonatomic) IBOutlet UIButton *totalDistancLevelFour;
+@property (weak, nonatomic) IBOutlet UIButton *totalDistancLevelFive;
+@property (weak, nonatomic) IBOutlet UIButton *totalDistancLevelSix;
 @property (weak, nonatomic) IBOutlet UIButton *numberOfRunsLevelOne;
 @property (weak, nonatomic) IBOutlet UIButton *numberOfRunsLevelTwo;
 @property (weak, nonatomic) IBOutlet UIButton *numberOfRunsLevelThree;
@@ -36,12 +36,10 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *numberOfRuns;
 @property (weak, nonatomic) IBOutlet UIScrollView *keepVisiting;
 
-@property (weak, nonatomic) IBOutlet UIScrollView *totalDistance;
+@property (weak, nonatomic) IBOutlet UIScrollView *totalDistanc;
 @end
 
 @implementation AchievementsViewController
-int milesRun;
-int numberOfPins;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,11 +54,11 @@ int numberOfPins;
 {
     [super viewDidLoad];
     [self.numberOfPins setScrollEnabled:YES];
-    [self.totalDistance setScrollEnabled:YES];
+    [self.totalDistanc setScrollEnabled:YES];
     [self.numberOfRuns setScrollEnabled:YES];
     [self.keepVisiting setScrollEnabled:YES];
     [self.numberOfPins setContentSize: CGSizeMake(430, -65)];
-    [self.totalDistance setContentSize: CGSizeMake (650, 100)];
+    [self.totalDistanc setContentSize: CGSizeMake (650, 100)];
     [self.numberOfRuns setContentSize: CGSizeMake (650, 100)];
     [self.keepVisiting setContentSize: CGSizeMake (650, 100)];
     [self updateAchievements];
@@ -80,62 +78,47 @@ int numberOfPins;
 
 - (void) updateAchievements {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setFloat: ([defaults floatForKey:@"totalDistance"] + milesRun) forKey:@"totalDistance"];
-    [defaults setInteger: ([defaults integerForKey:@"numberOfRuns"] + 1) forKey: @"numberOfRuns"];
-    [defaults setInteger: ([defaults integerForKey:@"totalNumberOfPins"] + numberOfPins) forKey: @"totalNumberOfPins"];
-    [defaults synchronize];
+    NSDictionary * numberOfPins = [[NSDictionary alloc] initWithObjectsAndKeys:@5, @"LevelOne", @10, @"LevelTwo", @15, @"LevelThree", @20, @"LevelFour", nil];
+    NSDictionary * numberOfRuns = [[NSDictionary alloc] initWithObjectsAndKeys:@1, @"LevelOne", @5, @"LevelTwo", @10, @"LevelThree", @20, @"LevelFour", @50, @"LevelFive", @100, @"LevelSix", nil];
+    NSDictionary * totalDistanc = [[NSDictionary alloc] initWithObjectsAndKeys:@1, @"LevelOne", @5, @"LevelTwo", @10, @"LevelThree", @20, @"LevelFour", @50, @"LevelFive", @100, @"LevelSix", nil];
+    NSDictionary * keepVisiting = [[NSDictionary alloc] initWithObjectsAndKeys:@2, @"LevelOne", @5, @"LevelTwo", @7, @"LevelThree", @10, @"LevelFour", @14, @"LevelFive", @21, @"LevelSix", nil];
+    [defaults setObject:numberOfPins forKey:@"numberOfPinsDict"];
+    [defaults setObject:numberOfRuns forKey:@"numberOfRunsDict"];
+    [defaults setObject:totalDistanc forKey:@"totalDistancDict"];
+    [defaults setObject:keepVisiting forKey:@"keepVisitingDict"];
     [self checkAchievements];
+}
+- (NSString *) returnNumberString: (int) number {
+    if (number == 1) return @"One";
+    else if (number == 2) return @"Two";
+    else if (number == 3) return @"Three";
+    else if (number == 4) return @"Four";
+    else if (number == 5) return @"Five";
+    else if (number == 6) return @"Six";
+    else return NULL;
 }
 - (void) checkAchievements {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary * numberOfPins = [[NSDictionary alloc] initWithObjectsAndKeys:@5, @"LevelOne", @10, @"LevelTwo", @15, @"LevelThree", @20, @"LevelFour", nil];
-    NSDictionary * numberOfRuns = [[NSDictionary alloc] initWithObjectsAndKeys:@1, @"LevelOne", @5, @"LevelTwo", @10, @"LevelThree", @20, @"LevelFour", @50, @"LevelFive", @100, @"LevelSix", nil];
-    NSDictionary * totalDistance = [[NSDictionary alloc] initWithObjectsAndKeys:@1, @"LevelOne", @5, @"LevelTwo", @10, @"LevelThree", @20, @"LevelFour", @50, @"LevelFive", @100, @"LevelSix", nil];
-    NSDictionary * keepVisiting = [[NSDictionary alloc] initWithObjectsAndKeys:@2, @"LevelOne", @5, @"LevelTwo", @7, @"LevelThree", @10, @"LevelFour", @14, @"LevelFive", @21, @"LevelSix", nil];
-    if ([defaults floatForKey:@"totalNumberOfPins"] >= 5)[defaults setBool:YES forKey:@"numberOfPinsLevelOneStatus"];
-    else [defaults setBool: NO forKey:@"numberOfPinsLevelOneStatus"];
-    if ([defaults floatForKey:@"totalNumberOfPins"] >= 10)[defaults setBool:YES forKey:@"numberOfPinsLevelTwoStatus"];
-    else [defaults setBool: NO forKey: @"numberOfPinsLevelTwoStatus"];
-    if ([defaults floatForKey:@"totalNumberOfPins"] >= 15)[defaults setBool:YES forKey:@"numberOfPinsLevelThreeStatus"];
-    else [defaults setBool: NO forKey: @"numberOfPinsLevelThreeStatus"];
-    if ([defaults floatForKey:@"totalNumberOfPins"] >= 20)[defaults setBool:YES forKey:@"numberOfPinsLevelFourStatus"];
-    else [defaults setBool: NO forKey: @"numberOfPinsLevelFourStatus"];
-    if ([defaults floatForKey:@"numberOfRuns"] >= 1)[defaults setBool:YES forKey:@"numberOfRunsLevelOneStatus"];
-    else [defaults setBool: NO forKey:@"numberOfRunsLevelOneStatus"];
-    if ([defaults floatForKey:@"numberOfRuns"] >= 5)[defaults setBool:YES forKey:@"numberOfRunsLevelTwoStatus"];
-    else [defaults setBool: NO forKey: @"numberOfRunsLevelTwoStatus"];
-    if ([defaults floatForKey:@"numberOfRuns"] >= 10)[defaults setBool:YES forKey:@"numberOfRunsLevelThreeStatus"];
-    else [defaults setBool: NO forKey: @"numberOfRunsLevelThreeStatus"];
-    if ([defaults floatForKey:@"numberOfRuns"] >= 20)[defaults setBool:YES forKey:@"numberOfRunsLevelFourStatus"];
-    else [defaults setBool: NO forKey: @"numberOfRunsLevelFourStatus"];
-    if ([defaults floatForKey:@"numberOfRuns"] >= 50)[defaults setBool:YES forKey:@"numberOfRunsLevelFiveStatus"];
-    else [defaults setBool: NO forKey: @"numberOfRunsLevelFiveStatus"];
-    if ([defaults floatForKey:@"numberOfRuns"] >= 100)[defaults setBool:YES forKey:@"numberOfRunsLevelSixStatus"];
-    else [defaults setBool: NO forKey: @"numberOfRunsLevelSixStatus"];
-    if ([defaults floatForKey:@"totalDistance"] >= 1)[defaults setBool:YES forKey:@"totalDistanceLevelOneStatus"];
-    else [defaults setBool: NO forKey:@"totalDistanceLevelOneStatus"];
-    if ([defaults floatForKey:@"totalDistance"] >= 5)[defaults setBool:YES forKey:@"totalDistanceLevelTwoStatus"];
-    else [defaults setBool: NO forKey: @"totalDistanceLevelTwoStatus"];
-    if ([defaults floatForKey:@"totalDistance"] >= 10)[defaults setBool:YES forKey:@"totalDistanceLevelThreeStatus"];
-    else [defaults setBool: NO forKey: @"totalDistanceLevelThreeStatus"];
-    if ([defaults floatForKey:@"totalDistance"] >= 20)[defaults setBool:YES forKey:@"totalDistanceLevelFourStatus"];
-    else [defaults setBool: NO forKey: @"totalDistanceLevelFourStatus"];
-    if ([defaults floatForKey:@"totalDistance"] >= 50)[defaults setBool:YES forKey:@"totalDistanceLevelFiveStatus"];
-    else [defaults setBool: NO forKey: @"totalDistanceLevelFiveStatus"];
-    if ([defaults floatForKey:@"totalDistance"] >= 100)[defaults setBool:YES forKey:@"totalDistanceLevelSixStatus"];
-    else [defaults setBool: NO forKey: @"totalDistanceLevelSixStatus"];
-    if ([defaults floatForKey:@"keepVisiting"] >= 2)[defaults setBool:YES forKey:@"keepVisitingLevelOneStatus"];
-    else [defaults setBool: NO forKey:@"keepVisitingLevelOneStatus"];
-    if ([defaults floatForKey:@"keepVisiting"] >= 5)[defaults setBool:YES forKey:@"keepVisitingLevelTwoStatus"];
-    else [defaults setBool: NO forKey: @"keepVisitingLevelTwoStatus"];
-    if ([defaults floatForKey:@"keepVisiting"] >= 7)[defaults setBool:YES forKey:@"keepVisitingLevelThreeStatus"];
-    else [defaults setBool: NO forKey: @"keepVisitingLevelThreeStatus"];
-    if ([defaults floatForKey:@"keepVisiting"] >= 10)[defaults setBool:YES forKey:@"keepVisitingLevelFourStatus"];
-    else [defaults setBool: NO forKey: @"keepVisitingLevelFourStatus"];
-    if ([defaults floatForKey:@"keepVisiting"] >= 14)[defaults setBool:YES forKey:@"keepVisitingLevelFiveStatus"];
-    else [defaults setBool: NO forKey: @"keepVisitingLevelFiveStatus"];
-    if ([defaults floatForKey:@"keepVisiting"] >= 21)[defaults setBool:YES forKey:@"keepVisitingLevelSixStatus"];
-    else [defaults setBool: NO forKey: @"keepVisitingLevelSixStatus"];
+    for (int i=1; i<5; i++) {
+        NSString * numberString = [self returnNumberString:i];
+        if ([defaults floatForKey:@"totalNumberOfPins"] >= [[[defaults objectForKey:@"numberOfPinsDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue]) [defaults setBool:YES forKey:[NSString stringWithFormat:@"numberOfPinsLevel%@Status", numberString]];
+        else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"numberOfPinsLevel%@Status", numberString]];
+        if ([defaults floatForKey:@"numberOfRuns"] >= [[[defaults objectForKey:@"numberOfRunsDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue])[defaults setBool:YES forKey:[NSString stringWithFormat:@"numberOfRunsLevel%@Status", numberString]];
+        else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"numberOfRunsLevel%@Status", numberString]];
+        if ([defaults floatForKey:@"totalDistanc"] >= [[[defaults objectForKey:@"totalDistancDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue])[defaults setBool:YES forKey:[NSString stringWithFormat:@"totalDistancLevel%@Status", numberString]];
+        else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"totalDistancLevel%@Status", numberString]];
+        if ([defaults floatForKey:@"keepVisiting"] >= [[[defaults objectForKey:@"keepVisitingDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue])[defaults setBool:YES forKey:[NSString stringWithFormat:@"keepVisitingLevel%@Status", numberString]];
+        else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"keepVisitingLevel%@Status", numberString]];
+    }
+    for (int i=5; i<7; i++) {
+        NSString * numberString = [self returnNumberString:i];
+        if ([defaults floatForKey:@"numberOfRuns"] >= [[[defaults objectForKey:@"numberOfRunsDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue])[defaults setBool:YES forKey:[NSString stringWithFormat:@"numberOfRunsLevel%@Status", numberString]];
+        else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"numberOfRunsLevel%@Status", numberString]];
+        if ([defaults floatForKey:@"totalDistanc"] >= [[[defaults objectForKey:@"totalDistancDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue])[defaults setBool:YES forKey:[NSString stringWithFormat:@"totalDistancLevel%@Status", numberString]];
+        else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"totalDistancLevel%@Status", numberString]];
+        if ([defaults floatForKey:@"keepVisiting"] >= [[[defaults objectForKey:@"keepVisitingDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue])[defaults setBool:YES forKey:[NSString stringWithFormat:@"keepVisitingLevel%@Status", numberString]];
+        else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"keepVisitingLevel%@Status", numberString]];
+    }
      [defaults synchronize];
     if ([defaults boolForKey:@"numberOfPinsLevelOneStatus"]) [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsLevelOneSuccess.png"] forState:UIControlStateNormal];
     else [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsFail.png"] forState:UIControlStateNormal];
@@ -158,18 +141,18 @@ int numberOfPins;
     if ([defaults boolForKey:@"numberOfRunsLevelSixStatus"]) [_numberOfRunsLevelSix setImage:[UIImage imageNamed: @"numberOfRunsLevelSixSuccess.png"] forState:UIControlStateNormal];
     else [_numberOfRunsLevelSix setImage:[UIImage imageNamed: @"numberOfRunsFail.png"] forState:UIControlStateNormal];
  
-    if ([defaults boolForKey:@"totalDistanceLevelOneStatus"]) [_totalDistanceLevelOne setImage:[UIImage imageNamed: @"totalDistanceLevelOneSuccess.png"] forState:UIControlStateNormal];
-    else [_totalDistanceLevelOne setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"totalDistanceLevelTwoStatus"]) [_totalDistanceLevelTwo setImage:[UIImage imageNamed: @"totalDistanceLevelTwoSuccess.png"] forState:UIControlStateNormal];
-    else [_totalDistanceLevelTwo setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"totalDistanceLevelThreeStatus"]) [_totalDistanceLevelThree setImage:[UIImage imageNamed: @"totalDistanceLevelThreeSuccess.png"] forState:UIControlStateNormal];
-    else [_totalDistanceLevelThree setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"totalDistanceLevelFourStatus"]) [_totalDistanceLevelFour setImage:[UIImage imageNamed: @"totalDistanceLevelFourSuccess.png"] forState:UIControlStateNormal];
-    else [_totalDistanceLevelFour setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"totalDistanceLevelFiveStatus"]) [_totalDistanceLevelFive setImage:[UIImage imageNamed: @"totalDistanceLevelFiveSuccess.png"] forState:UIControlStateNormal];
-    else [_totalDistanceLevelFive setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
-    if ([defaults boolForKey:@"totalDistanceLevelSixStatus"]) [_totalDistanceLevelSix setImage:[UIImage imageNamed: @"totalDistanceLevelSixSuccess.png"] forState:UIControlStateNormal];
-    else [_totalDistanceLevelSix setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"totalDistancLevelOneStatus"]) [_totalDistancLevelOne setImage:[UIImage imageNamed: @"totalDistancLevelOneSuccess.png"] forState:UIControlStateNormal];
+    else [_totalDistancLevelOne setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"totalDistancLevelTwoStatus"]) [_totalDistancLevelTwo setImage:[UIImage imageNamed: @"totalDistancLevelTwoSuccess.png"] forState:UIControlStateNormal];
+    else [_totalDistancLevelTwo setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"totalDistancLevelThreeStatus"]) [_totalDistancLevelThree setImage:[UIImage imageNamed: @"totalDistancLevelThreeSuccess.png"] forState:UIControlStateNormal];
+    else [_totalDistancLevelThree setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"totalDistancLevelFourStatus"]) [_totalDistancLevelFour setImage:[UIImage imageNamed: @"totalDistancLevelFourSuccess.png"] forState:UIControlStateNormal];
+    else [_totalDistancLevelFour setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"totalDistancLevelFiveStatus"]) [_totalDistancLevelFive setImage:[UIImage imageNamed: @"totalDistancLevelFiveSuccess.png"] forState:UIControlStateNormal];
+    else [_totalDistancLevelFive setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
+    if ([defaults boolForKey:@"totalDistancLevelSixStatus"]) [_totalDistancLevelSix setImage:[UIImage imageNamed: @"totalDistancLevelSixSuccess.png"] forState:UIControlStateNormal];
+    else [_totalDistancLevelSix setImage:[UIImage imageNamed: @"totalDistancFail.png"] forState:UIControlStateNormal];
     if ([defaults boolForKey:@"keepVisitingLevelOneStatus"]) [_keepVisitingLevelOne setImage:[UIImage imageNamed: @"keepVisitingLevelOneSuccess.png"] forState:UIControlStateNormal];
     else [_keepVisitingLevelOne setImage:[UIImage imageNamed: @"keepVisitingFail.png"] forState:UIControlStateNormal];
     if ([defaults boolForKey:@"keepVisitingLevelTwoStatus"]) [_keepVisitingLevelTwo setImage:[UIImage imageNamed: @"keepVisitingLevelTwoSuccess.png"] forState:UIControlStateNormal];

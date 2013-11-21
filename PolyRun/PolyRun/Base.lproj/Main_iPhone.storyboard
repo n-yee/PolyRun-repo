@@ -164,7 +164,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelOne">
+                                        <state key="normal" title="totalDistancLevelOne">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -176,7 +176,7 @@
                                         <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelTwo">
+                                        <state key="normal" title="totalDistancLevelTwo">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -188,7 +188,7 @@
                                         <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelThree">
+                                        <state key="normal" title="totalDistancLevelThree">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -200,7 +200,7 @@
                                         <rect key="frame" x="330" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelFour">
+                                        <state key="normal" title="totalDistancLevelFour">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -212,7 +212,7 @@
                                         <rect key="frame" x="440" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelFive">
+                                        <state key="normal" title="totalDistancLevelFive">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -224,7 +224,7 @@
                                         <rect key="frame" x="550" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelSix">
+                                        <state key="normal" title="totalDistancLevelSix">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -424,13 +424,13 @@
                         <outlet property="numberOfRunsLevelSix" destination="B7h-2Y-akg" id="97D-fD-q15"/>
                         <outlet property="numberOfRunsLevelThree" destination="iuB-Wu-SvU" id="Fam-oI-vSd"/>
                         <outlet property="numberOfRunsLevelTwo" destination="wVE-ZI-KEA" id="fOD-uM-EHJ"/>
-                        <outlet property="totalDistance" destination="xNp-U9-zQe" id="6u5-xb-yJg"/>
-                        <outlet property="totalDistanceLevelFive" destination="FVR-yA-UmQ" id="0WU-Uu-aPX"/>
-                        <outlet property="totalDistanceLevelFour" destination="Q77-VC-eew" id="9EU-9O-Aa7"/>
-                        <outlet property="totalDistanceLevelOne" destination="Xgn-lN-4Hq" id="T9y-it-3PD"/>
-                        <outlet property="totalDistanceLevelSix" destination="UfQ-TQ-T1b" id="zvY-HM-RrV"/>
-                        <outlet property="totalDistanceLevelThree" destination="QsA-C4-Ejr" id="FAY-Fc-aE8"/>
-                        <outlet property="totalDistanceLevelTwo" destination="2Le-5M-6Mf" id="sdT-9C-fO4"/>
+                        <outlet property="totalDistanc" destination="xNp-U9-zQe" id="BMt-kV-qI5"/>
+                        <outlet property="totalDistancLevelFive" destination="FVR-yA-UmQ" id="7vZ-jv-HlF"/>
+                        <outlet property="totalDistancLevelFour" destination="Q77-VC-eew" id="4k3-AE-5i5"/>
+                        <outlet property="totalDistancLevelOne" destination="Xgn-lN-4Hq" id="bzN-6I-KJF"/>
+                        <outlet property="totalDistancLevelSix" destination="UfQ-TQ-T1b" id="hYU-1E-Yrc"/>
+                        <outlet property="totalDistancLevelThree" destination="QsA-C4-Ejr" id="nb9-ei-r9K"/>
+                        <outlet property="totalDistancLevelTwo" destination="2Le-5M-6Mf" id="zOg-iT-DfM"/>
                         <segue destination="adc-MU-rrM" kind="push" identifier="achievementsSegue" id="0xz-iu-kyh"/>
                     </connections>
                 </viewController>
@@ -483,6 +483,7 @@
                     <navigationItem key="navigationItem" id="htS-d5-pMa"/>
                     <connections>
                         <outlet property="achievementPicture" destination="9Kc-Jx-x67" id="dLG-4q-5Oz"/>
+                        <outlet property="achievementProgress" destination="yYx-lE-tGM" id="ugb-zN-Kqf"/>
                         <outlet property="descriptionBox" destination="6Ai-Lw-Tu0" id="kSt-qV-4Be"/>
                         <outlet property="navigationBar" destination="htS-d5-pMa" id="6js-5N-rLj"/>
                     </connections>
