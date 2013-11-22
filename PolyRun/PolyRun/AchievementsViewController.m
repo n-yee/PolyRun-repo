@@ -166,5 +166,13 @@
     if ([defaults boolForKey:@"keepVisitingLevelSixStatus"]) [_keepVisitingLevelSix setImage:[UIImage imageNamed: @"keepVisitingLevelSixSuccess.png"] forState:UIControlStateNormal];
     else [_keepVisitingLevelSix setImage:[UIImage imageNamed: @"keepVisitingFail.png"] forState:UIControlStateNormal];
 }
+- (void) checkDate {
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    NSDate * today = [NSDate date];
+    NSDateComponents * lastRun = [defaults objectForKey: @"lastRunDate"];
+    NSCalendar * gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateInfo = [gregorianCalendar components:(NSDayCalendarUnit | NSWeekdayCalendarUnit) fromDate:today];
+    [defaults setObject: dateInfo forKey:@"lastRunDate"];
+}
 
 @end
