@@ -88,6 +88,7 @@
     bool swapped = false;
     do
     {
+        swapped = false;
         for(int i = 1; i < self.locations.count; i++)
         {
             if(self.locations[i-1] > self.locations[i])
@@ -207,7 +208,7 @@
 {
     
     
-    float myMiles = [_miles floatValue];
+    float myMiles = [_miles floatValue] * 1609.34;
     
     [self sortAllPoints];
     
@@ -227,9 +228,22 @@
             break;
         }
     }
+    NSMutableArray *shittyArray = [[NSMutableArray alloc] init];
+    for(int i = 0; i < self.route.count; i++)
+    {
     
-    _myRoute = _route;
+        
+        CLLocation *temp2 = self.route[i];
+        MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+        
+        CLLocationCoordinate2D temp = temp2.coordinate;
+
+        point.coordinate = temp;
+        [shittyArray addObject:point];
+    }
     
+    _myRoute = shittyArray;
+  
     
     
     [self performSegueWithIdentifier:@"runClicked" sender:self];
