@@ -76,6 +76,7 @@
 		CF2C83D01819E5BD00C2C073 /* PolyRunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C83CF1819E5BD00C2C073 /* PolyRunTests.m */; };
 		D29EEB8F183301F900A92DF6 /* achievementsDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EEB8E183301F900A92DF6 /* achievementsDescriptionViewController.m */; };
 		D2BA41301829CD5B00FDA64D /* AchievementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */; };
+		EAD64154183ED83B002618EB /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD64153183ED83B002618EB /* Checkpoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,8 @@
 		D29EEB8E183301F900A92DF6 /* achievementsDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = achievementsDescriptionViewController.m; sourceTree = "<group>"; };
 		D2BA412E1829CD5B00FDA64D /* AchievementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsViewController.h; sourceTree = "<group>"; };
 		D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsViewController.m; sourceTree = "<group>"; };
+		EAD64152183ED83B002618EB /* Checkpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkpoint.h; sourceTree = "<group>"; };
+		EAD64153183ED83B002618EB /* Checkpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checkpoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +327,8 @@
 		CF2C83951819E5BC00C2C073 = {
 			isa = PBXGroup;
 			children = (
+				EAD64152183ED83B002618EB /* Checkpoint.h */,
+				EAD64153183ED83B002618EB /* Checkpoint.m */,
 				CF2C83A71819E5BC00C2C073 /* PolyRun */,
 				CF2C83C91819E5BD00C2C073 /* PolyRunTests */,
 				CF2C83A01819E5BC00C2C073 /* Frameworks */,
@@ -553,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D29EEB8F183301F900A92DF6 /* achievementsDescriptionViewController.m in Sources */,
+				EAD64154183ED83B002618EB /* Checkpoint.m in Sources */,
 				CF2C83BB1819E5BC00C2C073 /* ViewController.m in Sources */,
 				CF2C83B21819E5BC00C2C073 /* AppDelegate.m in Sources */,
 				D2BA41301829CD5B00FDA64D /* AchievementsViewController.m in Sources */,
