@@ -88,6 +88,7 @@
     bool swapped = false;
     do
     {
+        swapped = false;
         for(int i = 1; i < self.locations.count; i++)
         {
             if(self.locations[i-1] > self.locations[i])
@@ -209,7 +210,7 @@
 {
     
     
-    float myMiles = [_miles floatValue];
+    float myMiles = [_miles floatValue] * 1609.34;
     
     [self sortAllPoints];
     
@@ -229,18 +230,21 @@
             break;
         }
     }
-    
+    NSMutableArray *shittyArray = [[NSMutableArray alloc] init];
     for(int i = 0; i < self.route.count; i++)
     {
     
         
-        Checkpoint *temp2 = self.route[0];
+        CLLocation *temp2 = self.route[i];
         MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-        point.coordinate = temp2.loc.coordinate;
-        [self.myRoute addObject:point];
+        
+        CLLocationCoordinate2D temp = temp2.coordinate;
+
+        point.coordinate = temp;
+        [shittyArray addObject:point];
     }
     
-    
+    _myRoute = shittyArray;
   
     
     
