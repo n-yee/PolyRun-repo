@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface ViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate>
 @property CLLocationManager *locMgr;
 @property BOOL alreadyZoomed;
+@property NSArray *routePoints;
 
 - (void) setRoute: (NSArray *) path;
+//- (bool) checkPoint: (NSArray *) points;
+
+
 
 //-(NSMutableArray*) getRoute;
 
