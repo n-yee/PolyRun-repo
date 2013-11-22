@@ -97,25 +97,25 @@
     double cmpr_lat = round(100000.0f * _myLoc.coordinate.latitude)/ 100000.0;
 
     int nextPoint = 0;
-    
-    while (nextPoint <= _routePoints.count) {
-        
-        if ((point[nextPoint] == cmpr_lat) && (point[nextPoint] == cmpr_long))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        
-        
-        
-    }
+    bool gotPoint = false;
     
 
+    //Check this is eats up proccessing time
     
-    return false;
+    while (nextPoint <= point.count) {
+        
+        MKPointAnnotation *tmpPoint = point[nextPoint];
+        
+        if ((tmpPoint.coordinate.latitude == cmpr_lat) && (tmpPoint.coordinate.longitude == cmpr_long))
+        {
+            gotPoint=true;
+        }
+ 
+    }
+
+    
+    return gotPoint;
+
 }
 
 // checks speed and starts the timer
@@ -165,7 +165,14 @@
         _startTimer = false;
     }
     
-    [self checkPoint:_routePoints];
+    if ([self checkPoint: _routePoints])
+    {
+        //set next point
+        NSUserDefaults *tmpPin = [NSUserDefaults standardUserDefaults];
+        [tmpPin setInteger:[tmpPin integerForKey:@"totalNumberOfPins"] +1 forKey:@"totalNumberOfPins"];
+        [tmpPin synchronize];
+    }
+
     
     // Put annotataion check in here either method or the actual code
     //also have a method that sets the next point location so that the when the call back is called it can compare its location with the nextpoint
@@ -177,79 +184,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
--(NSMutableArray*) getRoute
-{
-    
-    NSMutableArray * locations = [[NSMutableArray alloc] init];
-    
-    MKPointAnnotation *startPoint = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D startP;
-    startP.latitude = _locMgr.location.coordinate.latitude;
-    startP.longitude = _locMgr.location.coordinate.longitude;
-    
-    startPoint.coordinate=startP;
-    
-   [locations addObject:startPoint];
-    
-    MKPointAnnotation *p1 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP1;
-    coordP1.latitude = 35.30202;
-    coordP1.longitude= -120.66209;
-    
-    p1.coordinate=coordP1;
-    
-    [locations addObject:(p1)];
-    
-    
-    MKPointAnnotation *p2 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP2;
-    coordP2.latitude = 35.30235;
-    coordP2.longitude= -120.66227;
-    
-    p2.coordinate=coordP2;
-    
-    [locations addObject:(p2)];
-    
-    MKPointAnnotation *p3 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP3;
-    coordP3.latitude = 35.30235;
-    coordP3.longitude= -120.66287;
-    
-    p3.coordinate=coordP3;
-    
-    [locations addObject:(p3)];
-    
-    
-    MKPointAnnotation *p4 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP4;
-    coordP4.latitude = 35.30206;
-    coordP4.longitude= -120.66285;
-    
-    p4.coordinate=coordP4;
-    
-    [locations addObject:(p4)];
-    
-    
-    
-    MKPointAnnotation *p5 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP5;
-    coordP5.latitude = 35.30130;
-    coordP5.longitude= -120.66281;
-    
-    p5.coordinate=coordP5;
-    
-    [locations addObject:(p5)];
-    
-    return locations;
-}
-*/
 
 
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation {
@@ -329,7 +263,8 @@
     
     self.timer.hidden = NO;
     self.mileButton.hidden = YES;
-    self.routePoints = myPicker.myRoute;
+    
+    _routePoints = myPicker.myRoute;
     
     [self setRoute:myPicker.myRoute];
     

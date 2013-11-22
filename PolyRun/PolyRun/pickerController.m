@@ -228,7 +228,7 @@
             break;
         }
     }
-    NSMutableArray *shittyArray = [[NSMutableArray alloc] init];
+    NSMutableArray *tmpRoute = [[NSMutableArray alloc] init];
     for(int i = 0; i < self.route.count; i++)
     {
     
@@ -239,12 +239,11 @@
         CLLocationCoordinate2D temp = temp2.coordinate;
 
         point.coordinate = temp;
-        [shittyArray addObject:point];
+        [tmpRoute addObject:point];
     }
     
-    _myRoute = shittyArray;
-  
-    
+    _myRoute=tmpRoute;
+        
     
     [self performSegueWithIdentifier:@"runClicked" sender:self];
 }
