@@ -230,8 +230,18 @@
         }
     }
     
-    _myRoute = _route;
+    for(int i = 0; i < self.route.count; i++)
+    {
     
+        
+        Checkpoint *temp2 = self.route[0];
+        MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+        point.coordinate = temp2.loc.coordinate;
+        [self.myRoute addObject:point];
+    }
+    
+    
+  
     
     
     [self performSegueWithIdentifier:@"runClicked" sender:self];
