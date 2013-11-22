@@ -23,7 +23,6 @@
 @property int hours;
 @property bool startTimer;
 @property (weak, nonatomic) IBOutlet UIButton *mileButton;
-@property CLLocation *nextPoint;
 
 @end
 
@@ -96,14 +95,12 @@
 {
     double cmpr_long = round(100000.0f * _myLoc.coordinate.longitude)/ 100000.0;
     double cmpr_lat = round(100000.0f * _myLoc.coordinate.latitude)/ 100000.0;
+
+    int nextPoint = 0;
     
-    _nextPoint=0;
-    
-    //while ( _nextPoint < _routePoints.count) {
+    while (nextPoint <= _routePoints.count) {
         
-        /*
-        
-        if ((point[_nextPoint]== cmpr_lat) && (point[_nextPoint]== cmpr_long))
+        if ((point[nextPoint] == cmpr_lat) && (point[nextPoint] == cmpr_long))
         {
             return true;
         }
@@ -116,7 +113,7 @@
         
     }
     
-*/
+
     
     return false;
 }
