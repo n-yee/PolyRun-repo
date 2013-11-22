@@ -171,9 +171,9 @@
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     NSDate * today = [NSDate date];
     NSDate * yesterday = [today dateByAddingTimeInterval: -(60*60*24)];
-    NSInteger * lastRunYear = [defaults integerForKey: @"lastRunYear"];
-    NSInteger * lastRunMonth = [defaults integerForKey: @"lastRunMonth"];
-    NSInteger * lastRunDay = [defaults integerForKey: @"lastRunDay"];
+    NSInteger lastRunYear = [defaults integerForKey: @"lastRunYear"];
+    NSInteger lastRunMonth = [defaults integerForKey: @"lastRunMonth"];
+    NSInteger lastRunDay = [defaults integerForKey: @"lastRunDay"];
     NSCalendar * gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *thisRun = [gregorianCalendar components:(NSDayCalendarUnit | NSWeekdayCalendarUnit) fromDate:yesterday];
     NSDateComponents *todayComp = [gregorianCalendar components:(NSDayCalendarUnit | NSWeekdayCalendarUnit) fromDate:today];
