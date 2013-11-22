@@ -8,9 +8,12 @@
 
 #import "pickerController.h"
 #import "ViewController.h"
+#import "Checkpoint.h"
 
 
 @interface pickerController ()
+@property NSMutableArray *locations;
+@property NSMutableArray *route;
 
 @end
 
@@ -23,6 +26,14 @@
     arrStatus = [[NSArray alloc] initWithObjects:@"0", @"1",@"2",@"3", @"4",@"5", @"6", @"7", @"8", @"9", nil];
     
     decimal = [[NSArray alloc] initWithObjects:@".0", @".5", nil];
+    
+    self.locMgr = [[CLLocationManager alloc] init];
+    self.locMgr.distanceFilter = kCLDistanceFilterNone;
+    self.locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    self.locations = [[NSMutableArray alloc] init];
+    self.route = [[NSMutableArray alloc] init];
+    [self addAllPoints];
+    
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -72,294 +83,124 @@
     
 }
 
--(NSMutableArray*) getRouteHalfMile
+-(void) sortAllPoints
 {
-    
-    self.locMgr = [[CLLocationManager alloc] init];
-    self.locMgr.distanceFilter = kCLDistanceFilterNone;
-    self.locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-    
-   
-    NSMutableArray * locations = [[NSMutableArray alloc] init];
-    
-    MKPointAnnotation *startPoint = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D startP;
-    startP.latitude = _locMgr.location.coordinate.latitude;
-    startP.longitude = _locMgr.location.coordinate.longitude;
-    
-    startPoint.coordinate=startP;
-    
-    [locations addObject:startPoint];
-    
-    MKPointAnnotation *p1 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP1;
-    coordP1.latitude = 35.30202;
-    coordP1.longitude= -120.66209;
-    
-    p1.coordinate=coordP1;
-    
-    [locations addObject:(p1)];
-    
-    
-    MKPointAnnotation *p2 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP2;
-    coordP2.latitude = 35.30235;
-    coordP2.longitude= -120.66227;
-    
-    p2.coordinate=coordP2;
-    
-    [locations addObject:(p2)];
-    
-    MKPointAnnotation *p3 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP3;
-    coordP3.latitude = 35.30235;
-    coordP3.longitude= -120.66287;
-    
-    p3.coordinate=coordP3;
-    
-    [locations addObject:(p3)];
-    
-    
-    MKPointAnnotation *p4 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP4;
-    coordP4.latitude = 35.30206;
-    coordP4.longitude= -120.66285;
-    
-    p4.coordinate=coordP4;
-    
-    [locations addObject:(p4)];
-    
-    
-    
-    MKPointAnnotation *p5 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP5;
-    coordP5.latitude = 35.30130;
-    coordP5.longitude= -120.66281;
-    
-    p5.coordinate=coordP5;
-    
-    [locations addObject:(p5)];
-    
-    return locations;
-}
--(NSMutableArray*) getRouteOneMile
-{
-    
-    self.locMgr = [[CLLocationManager alloc] init];
-    self.locMgr.distanceFilter = kCLDistanceFilterNone;
-    self.locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-    
-    
-    NSMutableArray * locations = [[NSMutableArray alloc] init];
-    
-    MKPointAnnotation *startPoint = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D startP;
-    startP.latitude = _locMgr.location.coordinate.latitude;
-    startP.longitude = _locMgr.location.coordinate.longitude;
-    
-    startPoint.coordinate=startP;
-    
-    [locations addObject:startPoint];
-    
-    MKPointAnnotation *p1 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP1;
-    coordP1.latitude = 35.302343;
-    coordP1.longitude= -120.663046;
-    
-    p1.coordinate=coordP1;
-    
-    [locations addObject:(p1)];
-    
-    
-    MKPointAnnotation *p2 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP2;
-    coordP2.latitude = 35.303958;
-    coordP2.longitude= -120.662257;
-    
-    p2.coordinate=coordP2;
-    
-    [locations addObject:(p2)];
-    
-    MKPointAnnotation *p3 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP3;
-    coordP3.latitude = 35.304164;
-    coordP3.longitude= -120.66287;
-    
-    p3.coordinate=coordP3;
-    
-    [locations addObject:(p3)];
-    
-    
-    MKPointAnnotation *p4 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP4;
-    coordP4.latitude = 35.30306;
-    coordP4.longitude= -120.661222;
-    
-    p4.coordinate=coordP4;
-    
-    [locations addObject:(p4)];
-    
-    
-    
-    MKPointAnnotation *p5 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP5;
-    coordP5.latitude = 35.302198;
-    coordP5.longitude= -120.660616;
-    
-    p5.coordinate=coordP5;
-    
-    [locations addObject:(p5)];
-    
-    MKPointAnnotation *p6 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP6;
-    coordP6.latitude = 35.301331;
-    coordP6.longitude= -120.661254;
-    
-    p6.coordinate=coordP6;
-    
-    [locations addObject:(p6)];
-    
-    return locations;
+    bool swapped = false;
+    do
+    {
+        for(int i = 1; i < self.locations.count; i++)
+        {
+            if(self.locations[i-1] > self.locations[i])
+            {
+                Checkpoint *temp = self.locations[i];
+                self.locations[i] = self.locations[i-1];
+                self.locations[i-1] = temp;
+                swapped = true;
+            }
+        }
+    }while(swapped == true);
+    
+    for(int i = 1; i < self.locations.count; i++)
+    {
+        Checkpoint *temp = self.locations[i];
+        Checkpoint *temp2 = self.locations[i-1];
+        temp.distance = [temp.loc distanceFromLocation:temp2.loc];
+    }
+
 }
 
--(NSMutableArray*) getRouteThreeMile
+-(void) addAllPoints
 {
-    
-    self.locMgr = [[CLLocationManager alloc] init];
-    self.locMgr.distanceFilter = kCLDistanceFilterNone;
-    self.locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-    
-    
-    NSMutableArray * locations = [[NSMutableArray alloc] init];
-    
-    MKPointAnnotation *startPoint = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D startP;
-    startP.latitude = _locMgr.location.coordinate.latitude;
-    startP.longitude = _locMgr.location.coordinate.longitude;
-    
-    startPoint.coordinate=startP;
-    
-    [locations addObject:startPoint];
-    
-    MKPointAnnotation *p1 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP1;
-    coordP1.latitude = 35.30208;
-    coordP1.longitude= -120.664473;
-    
-    p1.coordinate=coordP1;
-    
-    [locations addObject:(p1)];
-    
-    
-    MKPointAnnotation *p2 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP2;
-    coordP2.latitude = 35.301695;
-    coordP2.longitude= -120.666382;
-    
-    p2.coordinate=coordP2;
-    
-    [locations addObject:(p2)];
-    
-    MKPointAnnotation *p3 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP3;
-    coordP3.latitude = 35.300022;
-    coordP3.longitude= -120.666136;
-    
-    p3.coordinate=coordP3;
-    
-    [locations addObject:(p3)];
-    
-    
-    MKPointAnnotation *p4 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP4;
-    coordP4.latitude = 35.29877;
-    coordP4.longitude= -120.665749;
-    
-    p4.coordinate=coordP4;
-    
-    [locations addObject:(p4)];
-    
-    
-    
-    MKPointAnnotation *p5 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP5;
-    coordP5.latitude = 35.297439;
-    coordP5.longitude= -120.666329;
-    
-    p5.coordinate=coordP5;
-    
-    [locations addObject:(p5)];
-    
-    MKPointAnnotation *p6 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP6;
-    coordP6.latitude = 35.295539;
-    coordP6.longitude= -120.665739;
-    
-    p6.coordinate=coordP6;
-    
-    [locations addObject:(p6)];
-    
-    MKPointAnnotation *p7 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP7;
-    coordP7.latitude = 35.294865;
-    coordP7.longitude= -120.664269;
-    
-    p7.coordinate=coordP7;
-    
-    [locations addObject:(p7)];
-    
-    MKPointAnnotation *p8 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP8;
-    coordP8.latitude = 35.296327;
-    coordP8.longitude= -120.661769;
-    
-    p8.coordinate=coordP8;
-    
-    [locations addObject:(p8)];
-   
-    MKPointAnnotation *p9 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP9;
-    coordP9.latitude = 35.297833;
-    coordP9.longitude= -120.662938;
-    
-    p9.coordinate=coordP9;
-    
-    [locations addObject:(p9)];
-    
-    MKPointAnnotation *p10 = [[MKPointAnnotation alloc] init];
-    
-    CLLocationCoordinate2D coordP10;
-    coordP10.latitude = 35.298945;
-    coordP10.longitude= -120.662209;
-    
-    p10.coordinate=coordP10;
-    
-    [locations addObject:(p10)];
+    [self addPoint:self.locMgr.location.coordinate.latitude :self.locMgr.location.coordinate.longitude];
+    [self addPoint:35.302623 :-120.657166];
+    [self addPoint:35.303092 :-120.65742];
+    [self addPoint:35.303417 :-120.657936];
+    [self addPoint:35.302831 :-120.65816];
+    [self addPoint:35.302218 :-120.658471];
+    [self addPoint:35.302804 :-120.659013];
+    [self addPoint:35.303311 :-120.659515];
+    [self addPoint:35.302963 :-120.660003];
+    [self addPoint:35.302857 :-120.660881];
+    [self addPoint:35.302678 :-120.661884];
+    [self addPoint:35.301904 :-120.662034];
+    [self addPoint:35.300976 :-120.661919];
+    [self addPoint:35.300772 :-120.662686];
+    [self addPoint:35.300744 :-120.663626];
+    [self addPoint:35.300003 :-120.664054];
+    [self addPoint:35.299264 :-120.663865];
+    [self addPoint:35.298504 :-120.66359];
+    [self addPoint:35.297653 :-120.663082];
+    [self addPoint:35.298345 :-120.662902];
+    [self addPoint:35.298903 :-120.662304];
+    [self addPoint:35.299061 :-120.662891];
+    [self addPoint:35.299663 :-120.662391];
+    [self addPoint:35.299581 :-120.661774];
+    [self addPoint:35.298889 :-120.661254];
+    [self addPoint:35.299083 :-120.659634];
+    [self addPoint:35.299782 :-120.659146];
+    [self addPoint:35.300233 :-120.658105];
+    [self addPoint:35.300322 :-120.659344];
+    [self addPoint:35.300787 :-120.66109];
+    [self addPoint:35.3012 :-120.659629];
+    [self addPoint:35.30179 :-120.658228];
+    [self addPoint:35.300361 :-120.657019];
+    [self addPoint:35.299438 :-120.656501];
+    [self addPoint:35.29933 :-120.656866];
+    [self addPoint:35.300222 :-120.656198];
+    [self addPoint:35.298832 :-120.655227];
+    [self addPoint:35.297762 :-120.654015];
+    [self addPoint:35.298193 : -120.653223];
+    [self addPoint:35.298237 :-120.654084];
+    [self addPoint:35.299622 :-120.65475];
+    [self addPoint:35.30049 :-120.656608];
+    [self addPoint:35.29904 :-120.658137];
+    [self addPoint:35.302983 :-120.664121];
+    [self addPoint:35.302436 :-120.664797];
+    [self addPoint:35.300084 :-120.665409];
+    [self addPoint: 35.298682 :-120.664395];
+    [self addPoint:35.303628 :-120.662708];
+    [self addPoint:35.305539 :-120.662989];
+    [self addPoint:35.306764 :-120.663262];
+    [self addPoint:35.308118 :-120.663722];
+    [self addPoint:35.308205 :-120.663172];
+    [self addPoint:35.308205 :-120.663172];
+    [self addPoint:35.308327 :-120.6615];
+    [self addPoint:35.30879 :-120.660457];
+    [self addPoint:35.309265 :-120.659647];
+    [self addPoint: 35.309053 :-120.658655];
+    [self addPoint:35.308781 :-120.659848];
+    [self addPoint:35.30863 :-120.659398];
+    [self addPoint:35.308504 :-120.658652];
+    [self addPoint:35.308339 :-120.657713];
+    [self addPoint: 35.307937 :-120.658816];
+    [self addPoint:35.307586 :-120.658113];
+    [self addPoint:35.307365 :-120.658915];
+    [self addPoint:35.30807 :-120.657274];
+    [self addPoint:35.308662 :-120.65686];
+    [self addPoint:35.308831 :-120.657738];
+    [self addPoint:35.306498 :-120.658824];
+    [self addPoint:35.30596 :-120.659602];
+    [self addPoint:35.30562 :-120.660393];
+    [self addPoint:35.304647 :-120.659191];
+    [self addPoint:35.305047 :-120.65947];
+    [self addPoint:35.305599 :-120.658961];
+    [self addPoint:35.304403 :-120.658446];
+    [self addPoint:35.304036 :-120.656399];
+    [self addPoint:35.304981 :-120.656799];
+    [self addPoint:35.305957 :-120.657282];
+    [self addPoint:35.30455 :-120.657831];
+    [self addPoint:35.303537 :-120.657595];
+    [self addPoint:35.304623 :-120.659258];
+}
 
-    return locations;
+-(void) addPoint : (double) latitude : (double) longitude
+{
+    Checkpoint *addThis = [[Checkpoint alloc] init];
+    addThis.loc = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude ];
+    addThis.distance = [self.locMgr.location distanceFromLocation:addThis.loc];
+
+    [self.locations addObject:addThis];
+
 }
 
 - (IBAction)runClicked:(UIButton *)sender
@@ -368,15 +209,26 @@
     
     float myMiles = [_miles floatValue];
     
-    if ( myMiles == 0.5) {
-        _myRoute = [self getRouteHalfMile];
+    [self sortAllPoints];
+    
+    int currentIndex = 0;
+    Checkpoint *checkThis = self.locations[0];
+    while(myMiles > checkThis.distance)
+    {
+        myMiles -= checkThis.distance;
+        currentIndex++;
+        [self.route addObject:checkThis.loc];
+        if(currentIndex < self.locations.count)
+        {
+        checkThis = self.locations[currentIndex];
+        }
+        else
+        {
+            break;
+        }
     }
-    else if ( myMiles > 0.5 && myMiles < 3.0) {
-        _myRoute = [self getRouteOneMile];
-    }
-    else {
-        _myRoute = [self getRouteThreeMile];
-    }
+    
+    _myRoute = _route;
     
     
     

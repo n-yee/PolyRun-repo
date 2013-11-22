@@ -119,7 +119,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b6t-54-Whf">
-                                        <rect key="frame" x="101" y="-65" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="-65" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfPinsLevelTwo">
@@ -131,7 +131,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wWg-HV-n97">
-                                        <rect key="frame" x="202" y="-65" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="-65" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfPinsLevelThree">
@@ -143,7 +143,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f29-4v-iaJ">
-                                        <rect key="frame" x="303" y="-65" width="100" height="100"/>
+                                        <rect key="frame" x="330" y="-65" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfPinsLevelFour">
@@ -154,48 +154,8 @@
                                             <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="KHY-Gu-3ER"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8Iw-ku-CVb">
-                                        <rect key="frame" x="404" y="-65" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="numberOfPinsLevelFive">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="vWI-b9-HOZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NDY-6o-Hqt">
-                                        <rect key="frame" x="505" y="-65" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="numberOfPinsLevelSix">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="achievementSelected:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="43W-EN-yoz"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </scrollView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pins" minimumFontSize="17" id="TNx-KY-EHy">
-                                <rect key="frame" x="0.0" y="488" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kYh-yS-o1X">
-                                <rect key="frame" x="95" y="518" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Refresh Counts">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="refreshPinCount:" destination="Kgg-BD-vUY" eventType="touchUpInside" id="QOM-F5-sHJ"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="xNp-U9-zQe">
                                 <rect key="frame" x="0.0" y="170" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -204,7 +164,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelOne">
+                                        <state key="normal" title="totalDistancLevelOne">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -213,10 +173,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Le-5M-6Mf">
-                                        <rect key="frame" x="101" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelTwo">
+                                        <state key="normal" title="totalDistancLevelTwo">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -225,10 +185,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QsA-C4-Ejr">
-                                        <rect key="frame" x="202" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelThree">
+                                        <state key="normal" title="totalDistancLevelThree">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -237,10 +197,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q77-VC-eew">
-                                        <rect key="frame" x="303" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="330" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelFour">
+                                        <state key="normal" title="totalDistancLevelFour">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -249,10 +209,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FVR-yA-UmQ">
-                                        <rect key="frame" x="404" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="440" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelFive">
+                                        <state key="normal" title="totalDistancLevelFive">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -261,10 +221,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UfQ-TQ-T1b">
-                                        <rect key="frame" x="505" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="550" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="totalDistanceLevelSix">
+                                        <state key="normal" title="totalDistancLevelSix">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -291,7 +251,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wVE-ZI-KEA">
-                                        <rect key="frame" x="101" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelTwo">
@@ -303,7 +263,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iuB-Wu-SvU">
-                                        <rect key="frame" x="202" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelThree">
@@ -315,7 +275,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HZC-XL-44M">
-                                        <rect key="frame" x="303" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="330" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelFour">
@@ -327,7 +287,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wyQ-ib-Qgg">
-                                        <rect key="frame" x="404" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="440" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelFive">
@@ -339,7 +299,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="B7h-2Y-akg">
-                                        <rect key="frame" x="505" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="550" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="numberOfRunsLevelSix">
@@ -369,7 +329,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h6b-AK-rFI">
-                                        <rect key="frame" x="101" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelTwo">
@@ -381,7 +341,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tcL-mM-Cmd">
-                                        <rect key="frame" x="202" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelThree">
@@ -393,7 +353,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YOP-6Q-jed">
-                                        <rect key="frame" x="303" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="330" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelFour">
@@ -405,7 +365,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qgX-Dm-v1u">
-                                        <rect key="frame" x="404" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="440" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelFive">
@@ -417,7 +377,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GpS-jG-nIK">
-                                        <rect key="frame" x="505" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="550" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="keepVisitingLevelSix">
@@ -430,20 +390,8 @@
                                     </button>
                                 </subviews>
                             </scrollView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance" minimumFontSize="17" id="6B0-cV-HCK">
-                                <rect key="frame" x="95" y="488" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Runs" minimumFontSize="17" id="IKU-CQ-AxI">
-                                <rect key="frame" x="203" y="488" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="94j-fI-vIn">
-                                <rect key="frame" x="102" y="538" width="116" height="30"/>
+                                <rect key="frame" x="102" y="507" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back To Running">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -465,11 +413,8 @@
                         <outlet property="keepVisitingLevelThree" destination="tcL-mM-Cmd" id="6Au-vI-Dtv"/>
                         <outlet property="keepVisitingLevelTwo" destination="h6b-AK-rFI" id="LSY-AV-Y77"/>
                         <outlet property="numberOfPins" destination="lLr-AU-BXP" id="CeC-tu-5vX"/>
-                        <outlet property="numberOfPinsAchieved" destination="TNx-KY-EHy" id="ZBg-fs-9E4"/>
-                        <outlet property="numberOfPinsLevelFive" destination="8Iw-ku-CVb" id="Mu9-IE-qPa"/>
                         <outlet property="numberOfPinsLevelFour" destination="f29-4v-iaJ" id="HqV-VF-5Cf"/>
                         <outlet property="numberOfPinsLevelOne" destination="NP9-wl-gg0" id="gcI-s1-Zh3"/>
-                        <outlet property="numberOfPinsLevelSix" destination="NDY-6o-Hqt" id="Icc-mP-fiX"/>
                         <outlet property="numberOfPinsLevelThree" destination="wWg-HV-n97" id="LMs-Hr-5rf"/>
                         <outlet property="numberOfPinsLevelTwo" destination="b6t-54-Whf" id="GK7-Q2-oNn"/>
                         <outlet property="numberOfRuns" destination="wA6-75-hqx" id="g0G-U7-Mrv"/>
@@ -479,13 +424,13 @@
                         <outlet property="numberOfRunsLevelSix" destination="B7h-2Y-akg" id="97D-fD-q15"/>
                         <outlet property="numberOfRunsLevelThree" destination="iuB-Wu-SvU" id="Fam-oI-vSd"/>
                         <outlet property="numberOfRunsLevelTwo" destination="wVE-ZI-KEA" id="fOD-uM-EHJ"/>
-                        <outlet property="totalDistance" destination="xNp-U9-zQe" id="6u5-xb-yJg"/>
-                        <outlet property="totalDistanceLevelFive" destination="FVR-yA-UmQ" id="0WU-Uu-aPX"/>
-                        <outlet property="totalDistanceLevelFour" destination="Q77-VC-eew" id="9EU-9O-Aa7"/>
-                        <outlet property="totalDistanceLevelOne" destination="Xgn-lN-4Hq" id="T9y-it-3PD"/>
-                        <outlet property="totalDistanceLevelSix" destination="UfQ-TQ-T1b" id="zvY-HM-RrV"/>
-                        <outlet property="totalDistanceLevelThree" destination="QsA-C4-Ejr" id="FAY-Fc-aE8"/>
-                        <outlet property="totalDistanceLevelTwo" destination="2Le-5M-6Mf" id="sdT-9C-fO4"/>
+                        <outlet property="totalDistanc" destination="xNp-U9-zQe" id="BMt-kV-qI5"/>
+                        <outlet property="totalDistancLevelFive" destination="FVR-yA-UmQ" id="7vZ-jv-HlF"/>
+                        <outlet property="totalDistancLevelFour" destination="Q77-VC-eew" id="4k3-AE-5i5"/>
+                        <outlet property="totalDistancLevelOne" destination="Xgn-lN-4Hq" id="bzN-6I-KJF"/>
+                        <outlet property="totalDistancLevelSix" destination="UfQ-TQ-T1b" id="hYU-1E-Yrc"/>
+                        <outlet property="totalDistancLevelThree" destination="QsA-C4-Ejr" id="nb9-ei-r9K"/>
+                        <outlet property="totalDistancLevelTwo" destination="2Le-5M-6Mf" id="zOg-iT-DfM"/>
                         <segue destination="adc-MU-rrM" kind="push" identifier="achievementsSegue" id="0xz-iu-kyh"/>
                     </connections>
                 </viewController>
@@ -538,6 +483,7 @@
                     <navigationItem key="navigationItem" id="htS-d5-pMa"/>
                     <connections>
                         <outlet property="achievementPicture" destination="9Kc-Jx-x67" id="dLG-4q-5Oz"/>
+                        <outlet property="achievementProgress" destination="yYx-lE-tGM" id="ugb-zN-Kqf"/>
                         <outlet property="descriptionBox" destination="6Ai-Lw-Tu0" id="kSt-qV-4Be"/>
                         <outlet property="navigationBar" destination="htS-d5-pMa" id="6js-5N-rLj"/>
                     </connections>
