@@ -11,6 +11,7 @@
 
 
 @interface pickerController ()
+@property NSMutableArray *locations;
 
 @end
 
@@ -24,6 +25,10 @@
     
     decimal = [[NSArray alloc] initWithObjects:@".0", @".5", nil];
     
+    self.locMgr = [[CLLocationManager alloc] init];
+    self.locMgr.distanceFilter = kCLDistanceFilterNone;
+    self.locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    self.locations = [[NSMutableArray alloc] init];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -72,15 +77,22 @@
     
 }
 
+-(void) addAllPoints
+{
+    [self addPoint:3.14 :212];
+    
+}
+
+-(void) addPoint : (double) latitude : (double) longitude
+{
+    CLLocation *loc = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude ];
+    [self.locations addObject:loc];
+
+}
+
 -(NSMutableArray*) getRouteHalfMile
 {
     
-    self.locMgr = [[CLLocationManager alloc] init];
-    self.locMgr.distanceFilter = kCLDistanceFilterNone;
-    self.locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-    
-   
-    NSMutableArray * locations = [[NSMutableArray alloc] init];
     
     MKPointAnnotation *startPoint = [[MKPointAnnotation alloc] init];
     
