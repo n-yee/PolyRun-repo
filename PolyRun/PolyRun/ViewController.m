@@ -17,12 +17,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *timer;
 @property NSUserDefaults *defaults;
 @property CLLocation *timerStartLoc;
-@property CLLocation *initialLoc;
+@property CLLocation *myLoc;
 @property int seconds;
 @property int minutes;
 @property int hours;
 @property bool startTimer;
 @property (weak, nonatomic) IBOutlet UIButton *mileButton;
+@property CLLocation *nextPoint;
 
 @end
 
@@ -32,21 +33,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    //CLLocationCoordinate2D tmp;
+    //tmp.latitude = _locMgr.location.coordinate.latitude;
+    //tmp.longitude = _locMgr.location.coordinate.longitude;
+    
+    //NSLog(@)
+    
+    double tmp=1.91351234;
+    double rtmp= round(100000.0f *tmp)/100000.0f;
+    
+    NSLog(@"%f",rtmp);
+    
+    
     [self initateZoom];
-    /*
-    NSMutableArray *myRoute = [self getRoute];
-
-    pickerController *myPicker = [[pickerController alloc] init];
-    
-    float miles_val = [myPicker.miles floatValue];
-    
-    if (miles_val == 0) {
-        NSLog(@"There was a problem");
-    }
-    else {
-        [self setRoute:myRoute];
-    }
-    */
 }
 
 // start then locates user and places blue dot
@@ -91,12 +92,41 @@
     [self.MapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
 }
 
+-(bool) checkPoint: (NSArray *) point
+{
+    double cmpr_long = round(100000.0f * _myLoc.coordinate.longitude)/ 100000.0;
+    double cmpr_lat = round(100000.0f * _myLoc.coordinate.latitude)/ 100000.0;
+    
+    _nextPoint=0;
+    
+    //while ( _nextPoint < _routePoints.count) {
+        
+        /*
+        
+        if ((point[_nextPoint]== cmpr_lat) && (point[_nextPoint]== cmpr_long))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+        
+        
+    }
+    
+*/
+    
+    return false;
+}
+
 // checks speed and starts the timer
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *loc = [locations firstObject];
-    _initialLoc = loc;
-    //NSLog(@"lat: %lf, long: %lf, speed:%lf", loc.coordinate.latitude, loc.coordinate.longitude, loc.speed);
+    _myLoc = loc;
+    NSLog(@"lat: %lf, long: %lf, speed:%lf", _myLoc.coordinate.latitude, _myLoc.coordinate.longitude, loc.speed);
     
     if (self.alreadyZoomed == NO) {
         [self zoomToLocation:loc.coordinate];
@@ -133,10 +163,15 @@
         _seconds = 0;
     }
     
-    if([loc distanceFromLocation:_initialLoc] < 5 && _minutes > 2)
+    if([loc distanceFromLocation:_myLoc] < 5 && _minutes > 2)
     {
         _startTimer = false;
     }
+    
+    [self checkPoint:_routePoints];
+    
+    // Put annotataion check in here either method or the actual code
+    //also have a method that sets the next point location so that the when the call back is called it can compare its location with the nextpoint
 }
 
 - (void)didReceiveMemoryWarning
@@ -219,6 +254,15 @@
 }
 */
 
+
+- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation {
+    
+    MKPinAnnotationView *newAnnotationPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"stuff"];
+    newAnnotationPin.pinColor = MKPinAnnotationColorGreen; // Or Red/Green
+    return newAnnotationPin;
+    
+}
+
 - (void) setRoute: (NSArray *) path
 {
     
@@ -259,20 +303,10 @@
     
     return polylineView;
 }
-/*
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-{
-    MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
-    if (!pinView)
-        {
-    pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
-    pinView.pinColor = MKPinAnnotationColorPurple;
-        }
-    return pinView;
-}
- 
- 
- */
+
+
+
+
 - (double) round: (double) num
 {
     if (num>=0) {
@@ -298,6 +332,7 @@
     
     self.timer.hidden = NO;
     self.mileButton.hidden = YES;
+    self.routePoints = myPicker.myRoute;
     
     [self setRoute:myPicker.myRoute];
     
