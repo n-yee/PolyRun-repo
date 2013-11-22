@@ -32,10 +32,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *keepVisitingLevelFour;
 @property (weak, nonatomic) IBOutlet UIButton *keepVisitingLevelFive;
 @property (weak, nonatomic) IBOutlet UIButton *keepVisitingLevelSix;
-@property (weak, nonatomic) IBOutlet UITextField *numberOfPinsAchieved;
 @property (weak, nonatomic) IBOutlet UIScrollView *numberOfRuns;
 @property (weak, nonatomic) IBOutlet UIScrollView *keepVisiting;
-
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *totalDistanc;
 @end
 
@@ -166,6 +165,7 @@
     else [_keepVisitingLevelFive setImage:[UIImage imageNamed: @"keepVisitingFail.png"] forState:UIControlStateNormal];
     if ([defaults boolForKey:@"keepVisitingLevelSixStatus"]) [_keepVisitingLevelSix setImage:[UIImage imageNamed: @"keepVisitingLevelSixSuccess.png"] forState:UIControlStateNormal];
     else [_keepVisitingLevelSix setImage:[UIImage imageNamed: @"keepVisitingFail.png"] forState:UIControlStateNormal];
+    _timeLabel.text = [defaults objectForKey: @"lastTime"];
 }
 - (void) checkDate {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
