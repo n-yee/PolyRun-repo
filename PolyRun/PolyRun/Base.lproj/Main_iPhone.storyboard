@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="-369" y="-30"/>
         </scene>
-        <!--Achievements View Controller-->
+        <!--Achievements View Controller - Achievements-->
         <scene sceneID="Gff-kr-WhF">
             <objects>
                 <viewController id="Kgg-BD-vUY" customClass="AchievementsViewController" sceneMemberID="viewController">
@@ -390,20 +390,29 @@
                                     </button>
                                 </subviews>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="94j-fI-vIn">
-                                <rect key="frame" x="102" y="507" width="116" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LFq-WO-6hb">
+                                <rect key="frame" x="66" y="488" width="188" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back To Running">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="lxu-no-VW7"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Last Run Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LCM-1i-yQY">
+                                <rect key="frame" x="80" y="535" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="a6C-ss-2H8"/>
+                    <navigationItem key="navigationItem" title="Achievements" id="a6C-ss-2H8">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="2HR-kn-Wq3">
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="modal" id="YcA-tf-TpC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="keepVisiting" destination="k2u-I4-tDd" id="X7Z-RZ-MkJ"/>
                         <outlet property="keepVisitingLevelFive" destination="qgX-Dm-v1u" id="diO-jO-0nl"/>
@@ -424,6 +433,7 @@
                         <outlet property="numberOfRunsLevelSix" destination="B7h-2Y-akg" id="97D-fD-q15"/>
                         <outlet property="numberOfRunsLevelThree" destination="iuB-Wu-SvU" id="Fam-oI-vSd"/>
                         <outlet property="numberOfRunsLevelTwo" destination="wVE-ZI-KEA" id="fOD-uM-EHJ"/>
+                        <outlet property="timeLabel" destination="LFq-WO-6hb" id="8Cj-My-f9h"/>
                         <outlet property="totalDistanc" destination="xNp-U9-zQe" id="BMt-kV-qI5"/>
                         <outlet property="totalDistancLevelFive" destination="FVR-yA-UmQ" id="7vZ-jv-HlF"/>
                         <outlet property="totalDistancLevelFour" destination="Q77-VC-eew" id="4k3-AE-5i5"/>
