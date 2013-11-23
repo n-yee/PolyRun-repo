@@ -22,6 +22,8 @@
 @property int minutes;
 @property int hours;
 @property bool startTimer;
+@property float distanceSet;
+@property float distanceTravelled;
 @property (weak, nonatomic) IBOutlet UIButton *mileButton;
 
 @end
@@ -102,7 +104,7 @@
 
     //Check this is eats up proccessing time
     
-    while (nextPoint <= point.count) {
+    if (nextPoint <= point.count) {
         
         MKPointAnnotation *tmpPoint = point[nextPoint];
         
@@ -123,6 +125,7 @@
 {
     CLLocation *loc = [locations firstObject];
     _myLoc = loc;
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     NSLog(@"lat: %lf, long: %lf, speed:%lf", _myLoc.coordinate.latitude, _myLoc.coordinate.longitude, loc.speed);
     
     if (self.alreadyZoomed == NO) {
@@ -160,11 +163,11 @@
         _seconds = 0;
     }
     
-    if([loc distanceFromLocation:_myLoc] < 5 && _minutes > 2)
+    if([loc distanceFromLocation:_myLoc] < 5 && _minutes > 2 && _distanceTravelled >= _distanceSet)
     {
         _startTimer = false;
+        [defaults setObject: self.timer.text forKey: @"lastTime"];
     }
-    
     if ([self checkPoint: _routePoints])
     {
         //set next point
@@ -265,6 +268,7 @@
     self.mileButton.hidden = YES;
     
     _routePoints = myPicker.myRoute;
+    _distanceSet = [myPicker.miles floatValue];
     
     [self setRoute:myPicker.myRoute];
     

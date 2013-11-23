@@ -31,6 +31,7 @@ NSString * achievement;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //Changes the title to be normal text instead of a coding signifier
     NSBundle * mainBundle = [NSBundle mainBundle];
     NSMutableDictionary * titleLabel = [NSMutableDictionary dictionary];
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
@@ -42,9 +43,12 @@ NSString * achievement;
     NSString * twelveLetterAchievement = [achievement substringToIndex:12];
     NSString * achievementLevel = [achievement substringFromIndex:12];
     _navigationBar.title = [titleLabel objectForKey: twelveLetterAchievement];
+    //Sets the picture to be a certain color based on success
     if ([defaults boolForKey:[NSString stringWithFormat:@"%@Status", [defaults objectForKey:@"achievementValue"]]]) _achievementPicture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Success.png", achievement]];
     else _achievementPicture.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@Fail.png", twelveLetterAchievement]];
+    //Adds description
     _descriptionBox.text = [NSString stringWithContentsOfFile:[mainBundle pathForResource:achievement ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+    //Updates progress bar based on progress for achievement
     _achievementProgress.progress = [defaults floatForKey:twelveLetterAchievement]/[[[defaults objectForKey:@"numberOfRunsDict"] objectForKey: achievementLevel] intValue];
 	// Do any additional setup after loading the view.
 }

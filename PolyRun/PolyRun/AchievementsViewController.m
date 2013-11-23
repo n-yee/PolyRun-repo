@@ -52,6 +52,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //Sets up UIScrollViews for each achievement list
     [self.numberOfPins setScrollEnabled:YES];
     [self.totalDistanc setScrollEnabled:YES];
     [self.numberOfRuns setScrollEnabled:YES];
@@ -71,12 +72,14 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction) achievementSelected: (UIButton *) sender {
+    //Provides description view controller with achievement to describe
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:sender.titleLabel.text forKey: @"achievementValue"];
     [self performSegueWithIdentifier:@"achievementsSegue" sender: self];
 }
 
 - (void) updateAchievements {
+    //Sets and stores achievement requirements
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary * numberOfPins = [[NSDictionary alloc] initWithObjectsAndKeys:@5, @"LevelOne", @10, @"LevelTwo", @15, @"LevelThree", @20, @"LevelFour", nil];
     NSDictionary * numberOfRuns = [[NSDictionary alloc] initWithObjectsAndKeys:@1, @"LevelOne", @5, @"LevelTwo", @10, @"LevelThree", @20, @"LevelFour", @50, @"LevelFive", @100, @"LevelSix", nil];
@@ -89,6 +92,7 @@
     [self checkAchievements];
 }
 - (NSString *) returnNumberString: (int) number {
+    //Chanes an integer to its string value
     if (number == 1) return @"One";
     else if (number == 2) return @"Two";
     else if (number == 3) return @"Three";
@@ -99,6 +103,7 @@
 }
 - (void) checkAchievements {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    //Checks each achievement for success
     for (int i=1; i<5; i++) {
         NSString * numberString = [self returnNumberString:i];
         if ([defaults floatForKey:@"totalNumberOfPins"] >= [[[defaults objectForKey:@"numberOfPinsDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue]) [defaults setBool:YES forKey:[NSString stringWithFormat:@"numberOfPinsLevel%@Status", numberString]];
@@ -110,6 +115,7 @@
         if ([defaults floatForKey:@"keepVisiting"] >= [[[defaults objectForKey:@"keepVisitingDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue])[defaults setBool:YES forKey:[NSString stringWithFormat:@"keepVisitingLevel%@Status", numberString]];
         else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"keepVisitingLevel%@Status", numberString]];
     }
+    //Checks each achievement for success
     for (int i=5; i<7; i++) {
         NSString * numberString = [self returnNumberString:i];
         if ([defaults floatForKey:@"numberOfRuns"] >= [[[defaults objectForKey:@"numberOfRunsDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue])[defaults setBool:YES forKey:[NSString stringWithFormat:@"numberOfRunsLevel%@Status", numberString]];
@@ -120,6 +126,7 @@
         else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"keepVisitingLevel%@Status", numberString]];
     }
      [defaults synchronize];
+    //Changes achievement picture color depending on success
     if ([defaults boolForKey:@"numberOfPinsLevelOneStatus"]) [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsLevelOneSuccess.png"] forState:UIControlStateNormal];
     else [_numberOfPinsLevelOne setImage:[UIImage imageNamed: @"numberOfPinsFail.png"] forState:UIControlStateNormal];
     if ([defaults boolForKey:@"numberOfPinsLevelTwoStatus"]) [_numberOfPinsLevelTwo setImage:[UIImage imageNamed: @"numberOfPinsLevelTwoSuccess.png"] forState:UIControlStateNormal];
@@ -165,9 +172,11 @@
     else [_keepVisitingLevelFive setImage:[UIImage imageNamed: @"keepVisitingFail.png"] forState:UIControlStateNormal];
     if ([defaults boolForKey:@"keepVisitingLevelSixStatus"]) [_keepVisitingLevelSix setImage:[UIImage imageNamed: @"keepVisitingLevelSixSuccess.png"] forState:UIControlStateNormal];
     else [_keepVisitingLevelSix setImage:[UIImage imageNamed: @"keepVisitingFail.png"] forState:UIControlStateNormal];
+    //Updates label for time the run took
     _timeLabel.text = [defaults objectForKey: @"lastTime"];
 }
 - (void) checkDate {
+    //Checks to see when a run took place in regards to last run
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     NSDate * today = [NSDate date];
     NSDate * yesterday = [today dateByAddingTimeInterval: -(60*60*24)];
