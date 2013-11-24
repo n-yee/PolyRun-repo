@@ -42,13 +42,33 @@
                                     <segue destination="UmG-Fd-jnS" kind="modal" id="mgY-pv-U2U"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fbb-TH-lCJ">
+                                <rect key="frame" x="120" y="497" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel Run">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelRun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ojt-wY-iCM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="71w-Wf-kNB">
+                                <rect key="frame" x="94" y="535" width="133" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="MapView" destination="6MW-2o-foD" id="iLw-cN-Ufp"/>
+                        <outlet property="achievBtn" destination="CyJ-77-HWL" id="HbB-ji-eqc"/>
+                        <outlet property="cancelBtn" destination="Fbb-TH-lCJ" id="XgV-NB-4mH"/>
                         <outlet property="mileButton" destination="Y9Y-4c-Q2J" id="N9e-3X-WJL"/>
                         <outlet property="timer" destination="ger-Ui-nTO" id="bMM-Jv-XOm"/>
+                        <outlet property="tmpLabel" destination="71w-Wf-kNB" id="4pN-rl-wnb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
