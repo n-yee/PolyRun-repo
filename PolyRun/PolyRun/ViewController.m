@@ -200,7 +200,7 @@
             
             _tmpLabel.text = @"check Point reached";
             
-            //[self placeNextPoint:_nextPoint];
+            [self placeNextPoint:_nextPoint];
             
         }
     }
@@ -226,15 +226,15 @@
 }
 
 // Use this if we change are minds to add each point and not use the routes
-/*
+
  - (void) placeNextPoint: (int) p
  {
  
  [self.MapView addAnnotation: _routePoints[p]];
  
  }
- */
 
+/*
 - (void) setRoute: (NSArray *) path
 {
     
@@ -265,7 +265,7 @@
     [self.MapView addOverlay:_polyLine];
     
 }
-
+*/
 
 //create overlay object
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
@@ -294,9 +294,9 @@
     _gotPoints = true;
     
     // Use in the placeNextPoint method is used
-    //[self placeNextPoint:0;
+    [self placeNextPoint:0];
     
-    [self setRoute:myPicker.myRoute];
+    //[self setRoute:myPicker.myRoute];
     
 }
 - (IBAction)cancelRun:(id)sender
