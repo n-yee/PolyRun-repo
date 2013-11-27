@@ -42,21 +42,7 @@
 {
     [super viewDidLoad];
     _gotPoints=false;
-    //Change to 1 if place next point is used
     _nextPoint=0;
-    
-    
-    //CLLocationCoordinate2D tmp;
-    //tmp.latitude = _locMgr.location.coordinate.latitude;
-    //tmp.longitude = _locMgr.location.coordinate.longitude;
-    
-    //NSLog(@)
-    
-    double tmp=1.91351234;
-    double rtmp= round(100000.0f *tmp)/100000.0f;
-    
-    NSLog(@"%f",rtmp);
-    
     
     [self initateZoom];
 }
@@ -105,14 +91,12 @@
 
 -(bool) checkPoint: (NSArray *) point
 {
-    //double cmpr_long = round(100000.0f * _myLoc.coordinate.longitude)/ 100000.0;
-    //double cmpr_lat = round(100000.0f * _myLoc.coordinate.latitude)/ 100000.0;
     
     CLLocation *myLoc = [[CLLocation alloc] initWithLatitude:_myLoc.coordinate.latitude longitude:_myLoc.coordinate.longitude];
     
     bool checkPointReached = false;
     
-    //test this on a phone.
+
     MKPointAnnotation *tmpPoint = point[_nextPoint];
     
     
@@ -128,7 +112,7 @@
         checkPointReached=true;
     }
     
-    if (checkPointReached)
+    if (checkPointReached && _nextPoint < _routePoints.count - 1)
     {
         _nextPoint++;
     }
@@ -196,12 +180,10 @@
         _seconds = 0;
     }
     
-    if([loc distanceFromLocation:_myLoc] < 5 && _minutes > 2 && distanceMiles >= _distanceSet)
-    {
-        _startTimer = false;
-        [defaults setObject: self.timer.text forKey: @"lastTime"];
-        [defaults setFloat:distanceMiles + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
-    }
+
+    
+    
+
     if (_gotPoints)
     {
         
@@ -215,10 +197,33 @@
             NSLog(@"checkpoint reached");
             
             _tmpLabel.text = @"check Point reached";
-            
-            [self placeNextPoint:_nextPoint];
+            if ( _nextPoint < _routePoints.count)
+            {
+                
+                [self placeNextPoint:_nextPoint];
+                
+            }
             
         }
+    }
+    
+    MKPointAnnotation *tmpPoint = _routePoints[_routePoints.count - 1];
+    
+    
+    CLLocation *lastPoint = [[CLLocation alloc] initWithLatitude:tmpPoint.coordinate.latitude longitude:tmpPoint.coordinate.longitude];
+    
+    NSLog( @"Last point long: %lf lat: %lf", tmpPoint.coordinate.longitude,tmpPoint.coordinate.latitude);
+    
+    
+    if([loc distanceFromLocation:lastPoint] <5) //< 5 && _minutes > 2 && distanceMiles >= _distanceSet)
+    {
+        _startTimer = false;
+        [defaults setObject: self.timer.text forKey: @"lastTime"];
+        [defaults setFloat:distanceMiles + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
+        
+        NSLog(@"RUN IS OVER");
+        
+        [self performSegueWithIdentifier:@"achievment" sender:self];
     }
 
     
@@ -249,39 +254,6 @@
  [self.MapView addAnnotation: _routePoints[p]];
  
  }
-
-/*
-- (void) setRoute: (NSArray *) path
-{
-    
-    CLLocationCoordinate2D coords[path.count +1];
-    
-    
-    
-    for (NSInteger i = 0; i < path.count; i++) {
-        CLLocation *location = [path objectAtIndex:i];
-        CLLocationCoordinate2D coordinate = location.coordinate;
-        
-        
-        
-        coords[i] = coordinate;
-        
-        NSLog(@"Long: %@ lat: %@", [NSString stringWithFormat: @"%g", coords[i].longitude], [NSString stringWithFormat: @"%g", coords[i].latitude]);
-        
-    }
-
-    coords[path.count] = coords[0];
-    
-    _polyLine = [MKPolyline polylineWithCoordinates:coords count:path.count+1];
-    
-    self.MapView.delegate = self;
-    
-    [self.MapView addAnnotations:path];
-    
-    [self.MapView addOverlay:_polyLine];
-    
-}
-*/
 
 //create overlay object
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
@@ -329,6 +301,11 @@
     [_MapView removeOverlay:_polyLine];
     
     self.cancelBtn.hidden = YES;
+    
+    _startTimer = false;
+    _seconds = 0;
+    _minutes = 0;
+    _hours = 0;
 }
 
 
