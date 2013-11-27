@@ -173,14 +173,14 @@
             _minutes = 0;
         }
         CLLocationDistance distanceMeters = 0;
-        CLLocation * lastLocation;
-        CLLocation * currentLocation;
-        [lastLocation initWithLatitude: [defaults floatForKey:@"currentLocationLatitude"] longitude:[defaults floatForKey:@"currentLocationLongitude"]];
+        CLLocation * location;
+        CLLocationCoordinate2D * coordinates = [CLLocationCoordinate2DMake([defaults floatForKey:@"currentLocationLatitude"], [defaults floatForKey:@"currentLocationLongitude"])];
+        CLLocation * lastLocation = [location initWithCoordinate:*coordinates altitude:0 horizontalAccuracy:0 verticalAccuracy:0 course:0 speed:0 timestamp:0];
         [defaults setFloat:lastLocation.coordinate.latitude forKey:@"lastLocationLatitude"];
         [defaults setFloat:lastLocation.coordinate.longitude forKey:@"lastLocationLongitude"];
         [defaults setFloat:loc.coordinate.longitude forKey:@"currentLocationLongitude"];
         [defaults setFloat:loc.coordinate.latitude forKey:@"currentLocationLatitude"];
-        [currentLocation initWithLatitude: [defaults floatForKey:@"currentLocationLatitude"] longitude:[defaults floatForKey:@"currentLocationLongitude"]];
+        CLLocation * currentLocation = loc;
         NSLog (@"current: %@, last: ", currentLocation);
         distanceMeters = distanceMeters + [currentLocation distanceFromLocation:lastLocation];
         distanceMiles = distanceMiles + distanceMeters * 0.000621371;
