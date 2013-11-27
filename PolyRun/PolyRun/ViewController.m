@@ -27,6 +27,7 @@
 @property int nextPoint;
 @property float distanceTravelled;
 @property MKPolyline *polyLine;
+@property NSMutableArray * locationList;
 @property (weak, nonatomic) IBOutlet UIButton *mileButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 @property (weak, nonatomic) IBOutlet UILabel *tmpLabel;
@@ -40,9 +41,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     _gotPoints=false;
-    
     //Change to 1 if place next point is used
     _nextPoint=0;
     
@@ -143,6 +142,7 @@
 {
     CLLocation *loc = [locations firstObject];
     _myLoc = loc;
+    NSMutableArray * locationList = [[NSMutableArray alloc] init];
     float distanceMiles = 0;
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
    // NSLog(@"lat: %lf, long: %lf, speed:%lf", _myLoc.coordinate.latitude, _myLoc.coordinate.longitude, loc.speed);
@@ -172,11 +172,21 @@
             _hours++;
             _minutes = 0;
         }
-        float distanceMeters = 0;
-        distanceMeters = distanceMeters + [[locations lastObject] distanceFromLocation:[locations objectAtIndex: locations.count + 1]];
+        CLLocationDistance distanceMeters = 0;
+        CLLocation * lastLocation;
+        CLLocation * currentLocation;
+        [lastLocation initWithLatitude: [defaults floatForKey:@"currentLocationLatitude"] longitude:[defaults floatForKey:@"currentLocationLongitude"]];
+        [defaults setFloat:lastLocation.coordinate.latitude forKey:@"lastLocationLatitude"];
+        [defaults setFloat:lastLocation.coordinate.longitude forKey:@"lastLocationLongitude"];
+        [defaults setFloat:loc.coordinate.longitude forKey:@"currentLocationLongitude"];
+        [defaults setFloat:loc.coordinate.latitude forKey:@"currentLocationLatitude"];
+        [currentLocation initWithLatitude: [defaults floatForKey:@"currentLocationLatitude"] longitude:[defaults floatForKey:@"currentLocationLongitude"]];
+        NSLog (@"current: %@, last: ", currentLocation);
+        distanceMeters = distanceMeters + [currentLocation distanceFromLocation:lastLocation];
         distanceMiles = distanceMiles + distanceMeters * 0.000621371;
-        NSLog(@"%f", distanceMiles);
+        NSLog(@"%f", distanceMeters);
         self.timer.text = [NSString stringWithFormat:@"%02d: %02d: %02d", _hours, _minutes, _seconds];
+        [defaults synchronize];
     }
     else if (loc.speed > 6) {
         self.timer.text = @"Cheater.";
