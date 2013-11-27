@@ -174,8 +174,9 @@
         }
         CLLocationDistance distanceMeters = 0;
         CLLocation * location;
-        CLLocationCoordinate2D * coordinates = [CLLocationCoordinate2DMake([defaults floatForKey:@"currentLocationLatitude"], [defaults floatForKey:@"currentLocationLongitude"])];
-        CLLocation * lastLocation = [location initWithCoordinate:*coordinates altitude:0 horizontalAccuracy:0 verticalAccuracy:0 course:0 speed:0 timestamp:0];
+        CLLocationCoordinate2D lastCoordinates = CLLocationCoordinate2DMake([defaults floatForKey:@"currentLocationLatitude"], [defaults floatForKey:@"currentLocationLongitude"]);
+        NSLog (@"%f, %f", lastCoordinates.latitude, lastCoordinates.longitude);
+        CLLocation * lastLocation = [location initWithLatitude: [defaults floatForKey:@"currentLocationLatitude"] longitude: [defaults floatForKey:@"currentLocationLongitude"]];
         [defaults setFloat:lastLocation.coordinate.latitude forKey:@"lastLocationLatitude"];
         [defaults setFloat:lastLocation.coordinate.longitude forKey:@"lastLocationLongitude"];
         [defaults setFloat:loc.coordinate.longitude forKey:@"currentLocationLongitude"];

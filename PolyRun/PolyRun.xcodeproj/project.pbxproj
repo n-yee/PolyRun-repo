@@ -76,6 +76,7 @@
 		CF2C83D01819E5BD00C2C073 /* PolyRunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C83CF1819E5BD00C2C073 /* PolyRunTests.m */; };
 		D29EEB8F183301F900A92DF6 /* achievementsDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EEB8E183301F900A92DF6 /* achievementsDescriptionViewController.m */; };
 		D2BA41301829CD5B00FDA64D /* AchievementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */; };
+		D2D02D0C1845830500065397 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D02D0B1845830500065397 /* CoreLocation.framework */; };
 		EAD64154183ED83B002618EB /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD64153183ED83B002618EB /* Checkpoint.m */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +168,7 @@
 		D29EEB8E183301F900A92DF6 /* achievementsDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = achievementsDescriptionViewController.m; sourceTree = "<group>"; };
 		D2BA412E1829CD5B00FDA64D /* AchievementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementsViewController.h; sourceTree = "<group>"; };
 		D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementsViewController.m; sourceTree = "<group>"; };
+		D2D02D0B1845830500065397 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EAD64152183ED83B002618EB /* Checkpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkpoint.h; sourceTree = "<group>"; };
 		EAD64153183ED83B002618EB /* Checkpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checkpoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D02D0C1845830500065397 /* CoreLocation.framework in Frameworks */,
 				704A668D18207E30007C1087 /* MapKit.framework in Frameworks */,
 				CF2C83A41819E5BC00C2C073 /* CoreGraphics.framework in Frameworks */,
 				CF2C83A61819E5BC00C2C073 /* UIKit.framework in Frameworks */,
@@ -348,6 +351,7 @@
 		CF2C83A01819E5BC00C2C073 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2D02D0B1845830500065397 /* CoreLocation.framework */,
 				704A668C18207E30007C1087 /* MapKit.framework */,
 				CF2C83A11819E5BC00C2C073 /* Foundation.framework */,
 				CF2C83A31819E5BC00C2C073 /* CoreGraphics.framework */,
