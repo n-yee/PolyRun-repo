@@ -143,6 +143,7 @@
 {
     CLLocation *loc = [locations firstObject];
     _myLoc = loc;
+    float distanceMiles = 0;
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
    // NSLog(@"lat: %lf, long: %lf, speed:%lf", _myLoc.coordinate.latitude, _myLoc.coordinate.longitude, loc.speed);
     
@@ -171,7 +172,10 @@
             _hours++;
             _minutes = 0;
         }
-        
+        float distanceMeters = 0;
+        distanceMeters = distanceMeters + [[locations lastObject] distanceFromLocation:[locations objectAtIndex: locations.count + 1]];
+        distanceMiles = distanceMiles + distanceMeters * 0.000621371;
+        NSLog(@"%f", distanceMiles);
         self.timer.text = [NSString stringWithFormat:@"%02d: %02d: %02d", _hours, _minutes, _seconds];
     }
     else if (loc.speed > 6) {
@@ -181,10 +185,11 @@
         _seconds = 0;
     }
     
-    if([loc distanceFromLocation:_myLoc] < 5 && _minutes > 2 && _distanceTravelled >= _distanceSet)
+    if([loc distanceFromLocation:_myLoc] < 5 && _minutes > 2 && distanceMiles >= _distanceSet)
     {
         _startTimer = false;
         [defaults setObject: self.timer.text forKey: @"lastTime"];
+        [defaults setFloat:distanceMiles + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
     }
     if (_gotPoints)
     {
