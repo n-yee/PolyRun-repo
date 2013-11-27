@@ -22,9 +22,15 @@
 @property int minutes;
 @property int hours;
 @property bool startTimer;
+@property bool gotPoints;
 @property float distanceSet;
+@property int nextPoint;
 @property float distanceTravelled;
+@property MKPolyline *polyLine;
 @property (weak, nonatomic) IBOutlet UIButton *mileButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
+@property (weak, nonatomic) IBOutlet UILabel *tmpLabel;
+@property (weak, nonatomic) IBOutlet UIButton *achievBtn;
 
 @end
 
@@ -34,6 +40,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _gotPoints=false;
+    
+    //Change to 1 if place next point is used
+    _nextPoint=0;
     
     
     //CLLocationCoordinate2D tmp;
@@ -95,28 +106,35 @@
 
 -(bool) checkPoint: (NSArray *) point
 {
-    double cmpr_long = round(100000.0f * _myLoc.coordinate.longitude)/ 100000.0;
-    double cmpr_lat = round(100000.0f * _myLoc.coordinate.latitude)/ 100000.0;
-
-    int nextPoint = 0;
-    bool gotPoint = false;
+    //double cmpr_long = round(100000.0f * _myLoc.coordinate.longitude)/ 100000.0;
+    //double cmpr_lat = round(100000.0f * _myLoc.coordinate.latitude)/ 100000.0;
     
-
-    //Check this is eats up proccessing time
+    CLLocation *myLoc = [[CLLocation alloc] initWithLatitude:_myLoc.coordinate.latitude longitude:_myLoc.coordinate.longitude];
     
-    if (nextPoint <= point.count) {
-        
-        MKPointAnnotation *tmpPoint = point[nextPoint];
-        
-        if ((tmpPoint.coordinate.latitude == cmpr_lat) && (tmpPoint.coordinate.longitude == cmpr_long))
-        {
-            gotPoint=true;
-        }
- 
+    bool checkPointReached = false;
+    
+    //test this on a phone.
+    MKPointAnnotation *tmpPoint = point[_nextPoint];
+    
+    
+    CLLocation *pointLoc = [[CLLocation alloc] initWithLatitude:tmpPoint.coordinate.latitude longitude:tmpPoint.coordinate.longitude];
+    
+    
+    CLLocationDistance dist = [pointLoc distanceFromLocation:myLoc];
+    
+    NSLog(@"long: %lf, lat: %lf, my location: long %lf lat %lf distance=%lf",pointLoc.coordinate.longitude,pointLoc.coordinate.latitude, _myLoc.coordinate.longitude,_myLoc.coordinate.latitude, dist);
+    
+    if ( dist <= 2.0)
+    {
+        checkPointReached=true;
     }
-
     
-    return gotPoint;
+    if (checkPointReached)
+    {
+        _nextPoint++;
+    }
+    
+    return checkPointReached;
 
 }
 
@@ -127,7 +145,7 @@
     _myLoc = loc;
     float distanceMiles = 0;
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"lat: %lf, long: %lf, speed:%lf", _myLoc.coordinate.latitude, _myLoc.coordinate.longitude, loc.speed);
+   // NSLog(@"lat: %lf, long: %lf, speed:%lf", _myLoc.coordinate.latitude, _myLoc.coordinate.longitude, loc.speed);
     
     if (self.alreadyZoomed == NO) {
         [self zoomToLocation:loc.coordinate];
@@ -173,17 +191,27 @@
         [defaults setObject: self.timer.text forKey: @"lastTime"];
         [defaults setFloat:distanceMiles + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
     }
-    if ([self checkPoint: _routePoints])
+    if (_gotPoints)
     {
-        //set next point
-        NSUserDefaults *tmpPin = [NSUserDefaults standardUserDefaults];
-        [tmpPin setInteger:[tmpPin integerForKey:@"totalNumberOfPins"] +1 forKey:@"totalNumberOfPins"];
-        [tmpPin synchronize];
+        
+        if ([self checkPoint: _routePoints])
+        {
+            //set point record for achievments
+            NSUserDefaults *tmpPin = [NSUserDefaults standardUserDefaults];
+            [tmpPin setInteger:[tmpPin integerForKey:@"totalNumberOfPins"] +1 forKey:@"totalNumberOfPins"];
+            [tmpPin synchronize];
+            
+            NSLog(@"checkpoint reached");
+            
+            _tmpLabel.text = @"check Point reached";
+            
+            [self placeNextPoint:_nextPoint];
+            
+        }
     }
 
     
-    // Put annotataion check in here either method or the actual code
-    //also have a method that sets the next point location so that the when the call back is called it can compare its location with the nextpoint
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -202,6 +230,16 @@
     
 }
 
+// Use this if we change are minds to add each point and not use the routes
+
+ - (void) placeNextPoint: (int) p
+ {
+ 
+ [self.MapView addAnnotation: _routePoints[p]];
+ 
+ }
+
+/*
 - (void) setRoute: (NSArray *) path
 {
     
@@ -223,16 +261,16 @@
 
     coords[path.count] = coords[0];
     
-    MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:path.count+1];
+    _polyLine = [MKPolyline polylineWithCoordinates:coords count:path.count+1];
     
     self.MapView.delegate = self;
     
     [self.MapView addAnnotations:path];
     
-    [self.MapView addOverlay:polyLine];
+    [self.MapView addOverlay:_polyLine];
     
 }
-
+*/
 
 //create overlay object
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
@@ -244,24 +282,6 @@
 }
 
 
-
-
-- (double) round: (double) num
-{
-    if (num>=0) {
-        num+=0.5;
-        
-    }
-    else {
-        num-=0.5;
-    }
-    
-    double roundNum = num;
-    
-    return roundNum;
-    
-}
-
 -(IBAction)unwindToRoutePicker:(UIStoryboardSegue *)sender
 {
     
@@ -271,12 +291,33 @@
     
     self.timer.hidden = NO;
     self.mileButton.hidden = YES;
+    self.achievBtn.hidden = YES;
+    self.cancelBtn.hidden = NO;
     
     _routePoints = myPicker.myRoute;
     _distanceSet = [myPicker.miles floatValue];
+    _gotPoints = true;
     
-    [self setRoute:myPicker.myRoute];
+    // Use in the placeNextPoint method is used
+    [self placeNextPoint:0];
     
+    //[self setRoute:myPicker.myRoute];
+    
+}
+- (IBAction)cancelRun:(id)sender
+{
+    
+    self.timer.hidden = YES;
+    self.mileButton.hidden = NO;
+    
+    for (id object in _routePoints)
+    {
+        
+        [_MapView removeAnnotation:object];
+    }
+    [_MapView removeOverlay:_polyLine];
+    
+    self.cancelBtn.hidden = YES;
 }
 
 
