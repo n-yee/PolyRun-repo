@@ -170,13 +170,7 @@
         _minutes = 0;
         _seconds = 0;
     }
-    
-    if([loc distanceFromLocation:_myLoc] < 5 && _minutes > 2 && distanceMiles >= _distanceSet)
-    {
-        _startTimer = false;
-        [defaults setObject: self.timer.text forKey: @"lastTime"];
-        [defaults setFloat:_distanceTravelled + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
-    }
+
     if (_gotPoints)
     {
         
@@ -212,8 +206,8 @@
     {
         _startTimer = false;
         [defaults setObject: self.timer.text forKey: @"lastTime"];
-        [defaults setFloat:distanceMiles + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
-        
+        [defaults setFloat:_distanceTravelled + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
+        [defaults synchronize];
         NSLog(@"RUN IS OVER");
         
         [self performSegueWithIdentifier:@"achievment" sender:self];
