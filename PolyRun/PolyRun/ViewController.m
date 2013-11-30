@@ -142,7 +142,6 @@
 {
     CLLocation *loc = [locations firstObject];
     _myLoc = loc;
-    NSMutableArray * locationList = [[NSMutableArray alloc] init];
     float distanceMiles = 0;
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
    // NSLog(@"lat: %lf, long: %lf, speed:%lf", _myLoc.coordinate.latitude, _myLoc.coordinate.longitude, loc.speed);
@@ -172,20 +171,12 @@
             _hours++;
             _minutes = 0;
         }
-        CLLocationDistance distanceMeters = 0;
-        CLLocation * location;
+        float distanceMeters = 0;
         CLLocationCoordinate2D lastCoordinates = CLLocationCoordinate2DMake([defaults floatForKey:@"currentLocationLatitude"], [defaults floatForKey:@"currentLocationLongitude"]);
-        NSLog (@"%f, %f", lastCoordinates.latitude, lastCoordinates.longitude);
-        CLLocation * lastLocation = [location initWithLatitude: [defaults floatForKey:@"currentLocationLatitude"] longitude: [defaults floatForKey:@"currentLocationLongitude"]];
-        [defaults setFloat:lastLocation.coordinate.latitude forKey:@"lastLocationLatitude"];
-        [defaults setFloat:lastLocation.coordinate.longitude forKey:@"lastLocationLongitude"];
         [defaults setFloat:loc.coordinate.longitude forKey:@"currentLocationLongitude"];
         [defaults setFloat:loc.coordinate.latitude forKey:@"currentLocationLatitude"];
-        CLLocation * currentLocation = loc;
-        NSLog (@"current: %@, last: ", currentLocation);
-        distanceMeters = distanceMeters + [currentLocation distanceFromLocation:lastLocation];
-        distanceMiles = distanceMiles + distanceMeters * 0.000621371;
-        NSLog(@"%f", distanceMeters);
+        distanceMeters = [self GetDistance:lastCoordinates.latitude long1:lastCoordinates.longitude la2:loc.coordinate.latitude long2:loc.coordinate.longitude];
+        _distanceTravelled = _distanceTravelled + distanceMeters * 0.000621371;
         self.timer.text = [NSString stringWithFormat:@"%02d: %02d: %02d", _hours, _minutes, _seconds];
         [defaults synchronize];
     }
@@ -200,7 +191,7 @@
     {
         _startTimer = false;
         [defaults setObject: self.timer.text forKey: @"lastTime"];
-        [defaults setFloat:distanceMiles + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
+        [defaults setFloat:_distanceTravelled + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
     }
     if (_gotPoints)
     {
@@ -224,7 +215,22 @@
     
 
 }
+-(double)GetDistance:(double)lat1 long1:(double)lng1 la2:(double)lat2 long2:(double)lng2 {
+    //NSLog(@"latitude 1:%.7f,longitude1:%.7f,latitude2:%.7f,longtitude2:%.7f",lat1,lng1,lat2,lng2);
+    double radLat1 = [self rad:lat1];
+    double radLat2 = [self rad:lat2];
+    double a = radLat1 - radLat2;
+    double b = [self rad:lng1] -[self rad:lng2];
+    double s = 2 * asin(sqrt(pow(sin(a/2),2) + cos(radLat1)*cos(radLat2)*pow(sin(b/2),2)));
+    s = s * 6378.138;
+    s = round(s * 10000) / 10000;
+    return s;
+}
 
+-(double)rad:(double)d
+{
+    return d *3.14159265 / 180.0;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
