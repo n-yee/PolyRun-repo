@@ -39,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UmG-Fd-jnS" kind="modal" id="mgY-pv-U2U"/>
+                                    <segue destination="UmG-Fd-jnS" kind="modal" identifier="achievment" id="mgY-pv-U2U"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fbb-TH-lCJ">
@@ -69,6 +69,7 @@
                         <outlet property="mileButton" destination="Y9Y-4c-Q2J" id="N9e-3X-WJL"/>
                         <outlet property="timer" destination="ger-Ui-nTO" id="bMM-Jv-XOm"/>
                         <outlet property="tmpLabel" destination="71w-Wf-kNB" id="4pN-rl-wnb"/>
+                        <segue destination="Kgg-BD-vUY" kind="modal" id="aOx-VJ-13P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -540,5 +541,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="YcA-tf-TpC"/>
+        <segue reference="aOx-VJ-13P"/>
     </inferredMetricsTieBreakers>
 </document>

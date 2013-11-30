@@ -14,11 +14,4 @@
 @property BOOL alreadyZoomed;
 @property NSArray *routePoints;
 
-- (void) setRoute: (NSArray *) path;
-//- (bool) checkPoint: (NSArray *) points;
-
-
-
-//-(NSMutableArray*) getRoute;
-
 @end
