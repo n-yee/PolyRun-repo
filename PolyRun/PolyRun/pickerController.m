@@ -91,7 +91,9 @@
         swapped = false;
         for(int i = 1; i < self.locations.count; i++)
         {
-            if(self.locations[i-1] > self.locations[i])
+            Checkpoint *compare1 = self.locations[i];
+            Checkpoint *compare2 = self.locations[i-1];
+            if(compare2.distance > compare1.distance)
             {
                 Checkpoint *temp = self.locations[i];
                 self.locations[i] = self.locations[i-1];
