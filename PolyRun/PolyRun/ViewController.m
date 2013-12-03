@@ -27,7 +27,6 @@
 @property int nextPoint;
 @property float distanceTravelled;
 @property MKPolyline *polyLine;
-@property NSMutableArray * locationList;
 @property (weak, nonatomic) IBOutlet UIButton *mileButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 @property (weak, nonatomic) IBOutlet UILabel *tmpLabel;
