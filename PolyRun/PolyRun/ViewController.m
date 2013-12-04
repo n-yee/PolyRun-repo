@@ -27,7 +27,6 @@
 @property int nextPoint;
 @property float distanceTravelled;
 @property MKPolyline *polyLine;
-@property NSMutableArray * locationList;
 @property (weak, nonatomic) IBOutlet UIButton *mileButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 @property (weak, nonatomic) IBOutlet UILabel *tmpLabel;
@@ -126,7 +125,6 @@
 {
     CLLocation *loc = [locations firstObject];
     _myLoc = loc;
-    float distanceMiles = 0;
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
    // NSLog(@"lat: %lf, long: %lf, speed:%lf", _myLoc.coordinate.latitude, _myLoc.coordinate.longitude, loc.speed);
     
@@ -169,6 +167,8 @@
         _hours = 0;
         _minutes = 0;
         _seconds = 0;
+        [defaults setObject:nil forKey:@"currentLocationLongitude"];
+        [defaults setObject:nil forKey:@"currentLocationLatitude"];
     }
 
     if (_gotPoints)
@@ -209,6 +209,8 @@
         [defaults setFloat:_distanceTravelled + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
         [defaults synchronize];
         NSLog(@"RUN IS OVER");
+        [defaults setObject:nil forKey:@"currentLocationLongitude"];
+        [defaults setObject:nil forKey:@"currentLocationLatitude"];
         
         [self performSegueWithIdentifier:@"achievment" sender:self];
     }

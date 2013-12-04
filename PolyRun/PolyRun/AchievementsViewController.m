@@ -204,7 +204,6 @@
     else if (lastRunDay != todayDay && lastRunYear != todayYear && todayMonth != lastRunMonth) {
         [defaults setInteger:1 forKey:@"daysInARow"];
     }
-    NSLog (@"%li : %li", todayDay, thisRunDay);
 }
 
 @end
