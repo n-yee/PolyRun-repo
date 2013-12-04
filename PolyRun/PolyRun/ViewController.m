@@ -101,10 +101,11 @@
     
     CLLocation *pointLoc = [[CLLocation alloc] initWithLatitude:tmpPoint.coordinate.latitude longitude:tmpPoint.coordinate.longitude];
     
+    NSLog(@"next lat: %f long: %f", tmpPoint.coordinate.latitude, tmpPoint.coordinate.longitude);
     
     CLLocationDistance dist = [pointLoc distanceFromLocation:myLoc];
     
-    if ( dist <= 5.0)
+    if ( dist <= 10)
     {
         checkPointReached=true;
     }
@@ -201,7 +202,7 @@
     NSLog( @"Last point long: %lf lat: %lf", tmpPoint.coordinate.longitude,tmpPoint.coordinate.latitude);
     
     
-    if([loc distanceFromLocation:lastPoint] < 5 && _minutes > 2 && _distanceTravelled >= _distanceSet)
+    if([loc distanceFromLocation:lastPoint] < 10)
     {
         _startTimer = false;
         [defaults setObject: self.timer.text forKey: @"lastTime"];
