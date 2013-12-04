@@ -203,7 +203,7 @@
     NSLog( @"Last point long: %lf lat: %lf", tmpPoint.coordinate.longitude,tmpPoint.coordinate.latitude);
     
     
-    if([loc distanceFromLocation:lastPoint] < 5 && _minutes > 2 && distanceMiles >= _distanceSet)
+    if([loc distanceFromLocation:lastPoint] < 5 && _minutes > 2 && _distanceTravelled >= _distanceSet)
     {
         _startTimer = false;
         [defaults setObject: self.timer.text forKey: @"lastTime"];
