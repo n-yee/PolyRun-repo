@@ -62,7 +62,6 @@
     [self.numberOfRuns setContentSize: CGSizeMake (650, 100)];
     [self.keepVisiting setContentSize: CGSizeMake (650, 100)];
     [self updateAchievements];
-    [self checkDate];
 	// Do any additional setup after loading the view.
 }
 
@@ -174,36 +173,6 @@
     else [_keepVisitingLevelSix setImage:[UIImage imageNamed: @"keepVisitingFail.png"] forState:UIControlStateNormal];
     //Updates label for time the run took
     _timeLabel.text = [defaults objectForKey: @"lastTime"];
-}
-- (void) checkDate {
-    //Checks to see when a run took place in regards to last run
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    NSDate * today = [NSDate date];
-    NSDate * yesterday = [today dateByAddingTimeInterval: -(60*60*24)];
-    NSInteger lastRunYear = [defaults integerForKey: @"lastRunYear"];
-    NSInteger lastRunMonth = [defaults integerForKey: @"lastRunMonth"];
-    NSInteger lastRunDay = [defaults integerForKey: @"lastRunDay"];
-    NSCalendar * gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *thisRun = [gregorianCalendar components:(NSDayCalendarUnit | NSWeekdayCalendarUnit) fromDate:yesterday];
-    NSDateComponents *todayComp = [gregorianCalendar components:(NSDayCalendarUnit | NSWeekdayCalendarUnit) fromDate:today];
-    NSInteger thisRunDay = [thisRun day];
-    NSInteger todayDay = [todayComp day];
-    NSInteger todayMonth = [todayComp month];
-    NSInteger todayYear = [todayComp year];
-    NSInteger thisRunMonth = [thisRun month];
-    NSInteger thisRunYear = [thisRun year];
-    [defaults setInteger: todayDay forKey:@"lastRunDay"];
-    [defaults setInteger: todayMonth forKey:@"lastRunMonth"];
-    [defaults setInteger: todayYear forKey:@"lastRunYear"];
-    if (lastRunDay == thisRunDay && lastRunMonth == thisRunMonth && lastRunYear == thisRunYear) {
-        [defaults setInteger: [defaults integerForKey:@"daysInARow"] +1 forKey:@"daysInARow"];
-        if ([defaults integerForKey:@"daysInARow"] >= [defaults integerForKey:@"keepVisiting"]) {
-            [defaults setInteger:[defaults integerForKey:@"daysInARow"] forKey:@"keepVisiting"];
-        }
-    }
-    else if (lastRunDay != todayDay && lastRunYear != todayYear && todayMonth != lastRunMonth) {
-        [defaults setInteger:1 forKey:@"daysInARow"];
-    }
 }
 
 @end
