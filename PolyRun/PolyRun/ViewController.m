@@ -289,6 +289,7 @@
     
     self.timer.hidden = YES;
     self.mileButton.hidden = NO;
+    self.achievBtn.hidden = NO;
     
     for (id object in _routePoints)
     {
