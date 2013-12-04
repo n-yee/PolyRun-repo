@@ -32,7 +32,7 @@
     self.locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     self.locations = [[NSMutableArray alloc] init];
     self.route = [[NSMutableArray alloc] init];
-    [self addAllPoints];
+    
     
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -176,7 +176,7 @@
 
 - (IBAction)runClicked:(UIButton *)sender
 {
-    
+    [self addAllPoints];
     
     float myMiles = [_miles floatValue] * 1609.34;
     
@@ -213,7 +213,8 @@
     }
     
     _myRoute=tmpRoute;
-        
+    _locations=nil;
+    
     
     [self performSegueWithIdentifier:@"runClicked" sender:self];
 }
