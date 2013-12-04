@@ -104,8 +104,6 @@
     
     CLLocationDistance dist = [pointLoc distanceFromLocation:myLoc];
     
-    NSLog(@"long: %lf, lat: %lf, my location: long %lf lat %lf distance=%lf",pointLoc.coordinate.longitude,pointLoc.coordinate.latitude, _myLoc.coordinate.longitude,_myLoc.coordinate.latitude, dist);
-    
     if ( dist <= 5.0)
     {
         checkPointReached=true;

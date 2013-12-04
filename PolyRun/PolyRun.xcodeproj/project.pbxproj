@@ -66,7 +66,6 @@
 		CF2C83AE1819E5BC00C2C073 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C83AD1819E5BC00C2C073 /* main.m */; };
 		CF2C83B21819E5BC00C2C073 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C83B11819E5BC00C2C073 /* AppDelegate.m */; };
 		CF2C83B51819E5BC00C2C073 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2C83B31819E5BC00C2C073 /* Main_iPhone.storyboard */; };
-		CF2C83B81819E5BC00C2C073 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2C83B61819E5BC00C2C073 /* Main_iPad.storyboard */; };
 		CF2C83BB1819E5BC00C2C073 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C83BA1819E5BC00C2C073 /* ViewController.m */; };
 		CF2C83BD1819E5BC00C2C073 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2C83BC1819E5BC00C2C073 /* Images.xcassets */; };
 		CF2C83C41819E5BD00C2C073 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C83C31819E5BD00C2C073 /* XCTest.framework */; };
@@ -155,7 +154,6 @@
 		CF2C83B01819E5BC00C2C073 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CF2C83B11819E5BC00C2C073 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CF2C83B41819E5BC00C2C073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		CF2C83B71819E5BC00C2C073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		CF2C83B91819E5BC00C2C073 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CF2C83BA1819E5BC00C2C073 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CF2C83BC1819E5BC00C2C073 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -371,7 +369,6 @@
 				D29EEB8E183301F900A92DF6 /* achievementsDescriptionViewController.m */,
 				D2BA412E1829CD5B00FDA64D /* AchievementsViewController.h */,
 				D2BA412F1829CD5B00FDA64D /* AchievementsViewController.m */,
-				CF2C83B61819E5BC00C2C073 /* Main_iPad.storyboard */,
 				704718121832F7AB004F3FB4 /* pickerController.m */,
 				704718161832F7C5004F3FB4 /* pickerController.h */,
 				CF2C83B91819E5BC00C2C073 /* ViewController.h */,
@@ -503,7 +500,6 @@
 				B49EBD52183C41ED00F0A204 /* keepVisitingLevelOne.txt in Resources */,
 				B49EBD55183C41ED00F0A204 /* keepVisitingLevelTwo.txt in Resources */,
 				B490D32218330B88008ADE77 /* keepVisitingLevelOneSuccess.png in Resources */,
-				CF2C83B81819E5BC00C2C073 /* Main_iPad.storyboard in Resources */,
 				B490D31718330B88008ADE77 /* numberOfPinsLevelFourSuccess.png in Resources */,
 				B49EBD4D183C41ED00F0A204 /* totalDistancLevelSix.txt in Resources */,
 				B49EBD47183C41ED00F0A204 /* numberOfPinsLevelOne.txt in Resources */,
@@ -604,14 +600,6 @@
 				CF2C83B41819E5BC00C2C073 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		CF2C83B61819E5BC00C2C073 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF2C83B71819E5BC00C2C073 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		CF2C83CC1819E5BD00C2C073 /* InfoPlist.strings */ = {
