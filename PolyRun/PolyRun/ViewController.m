@@ -106,7 +106,7 @@
     
     NSLog(@"long: %lf, lat: %lf, my location: long %lf lat %lf distance=%lf",pointLoc.coordinate.longitude,pointLoc.coordinate.latitude, _myLoc.coordinate.longitude,_myLoc.coordinate.latitude, dist);
     
-    if ( dist <= 2.0)
+    if ( dist <= 5.0)
     {
         checkPointReached=true;
     }
@@ -203,7 +203,7 @@
     NSLog( @"Last point long: %lf lat: %lf", tmpPoint.coordinate.longitude,tmpPoint.coordinate.latitude);
     
     
-    if([loc distanceFromLocation:lastPoint] <5) //< 5 && _minutes > 2 && distanceMiles >= _distanceSet)
+    if([loc distanceFromLocation:lastPoint] < 5 && _minutes > 2 && distanceMiles >= _distanceSet)
     {
         _startTimer = false;
         [defaults setObject: self.timer.text forKey: @"lastTime"];
@@ -220,7 +220,6 @@
 
 }
 -(double)GetDistance:(double)lat1 long1:(double)lng1 la2:(double)lat2 long2:(double)lng2 {
-    //NSLog(@"latitude 1:%.7f,longitude1:%.7f,latitude2:%.7f,longtitude2:%.7f",lat1,lng1,lat2,lng2);
     double radLat1 = [self rad:lat1];
     double radLat2 = [self rad:lat2];
     double a = radLat1 - radLat2;
@@ -273,7 +272,6 @@
 -(IBAction)unwindToRoutePicker:(UIStoryboardSegue *)sender
 {
     
-    // pickerController *myPicker = [[pickerController alloc] initWithNibName:@"pickerController" bundle:nil];
     
     pickerController *myPicker = sender.sourceViewController;
     
@@ -289,7 +287,6 @@
     // Use in the placeNextPoint method is used
     [self placeNextPoint:0];
     
-    //[self setRoute:myPicker.myRoute];
     
 }
 - (IBAction)cancelRun:(id)sender
@@ -311,6 +308,7 @@
     _seconds = 0;
     _minutes = 0;
     _hours = 0;
+    _nextPoint = 0;
 }
 - (void) checkDate {
     //Checks to see when a run took place in regards to last run
