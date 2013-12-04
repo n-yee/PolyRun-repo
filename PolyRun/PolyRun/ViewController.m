@@ -29,7 +29,6 @@
 @property MKPolyline *polyLine;
 @property (weak, nonatomic) IBOutlet UIButton *mileButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
-@property (weak, nonatomic) IBOutlet UILabel *tmpLabel;
 @property (weak, nonatomic) IBOutlet UIButton *achievBtn;
 
 @end
@@ -183,12 +182,9 @@
             
             NSLog(@"checkpoint reached");
             
-            _tmpLabel.text = @"check Point reached";
             if ( _nextPoint < _routePoints.count)
             {
-                
                 [self placeNextPoint:_nextPoint];
-                
             }
             
         }

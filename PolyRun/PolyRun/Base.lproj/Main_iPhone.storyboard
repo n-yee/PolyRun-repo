@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -52,13 +52,6 @@
                                     <action selector="cancelRun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ojt-wY-iCM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="71w-Wf-kNB">
-                                <rect key="frame" x="94" y="535" width="133" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -68,7 +61,6 @@
                         <outlet property="cancelBtn" destination="Fbb-TH-lCJ" id="XgV-NB-4mH"/>
                         <outlet property="mileButton" destination="Y9Y-4c-Q2J" id="N9e-3X-WJL"/>
                         <outlet property="timer" destination="ger-Ui-nTO" id="bMM-Jv-XOm"/>
-                        <outlet property="tmpLabel" destination="71w-Wf-kNB" id="4pN-rl-wnb"/>
                         <segue destination="Kgg-BD-vUY" kind="modal" id="aOx-VJ-13P"/>
                     </connections>
                 </viewController>
