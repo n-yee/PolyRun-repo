@@ -100,8 +100,6 @@
     
     CLLocation *pointLoc = [[CLLocation alloc] initWithLatitude:tmpPoint.coordinate.latitude longitude:tmpPoint.coordinate.longitude];
     
-    NSLog(@"next lat: %f long: %f", tmpPoint.coordinate.latitude, tmpPoint.coordinate.longitude);
-    
     CLLocationDistance dist = [pointLoc distanceFromLocation:myLoc];
     
     if ( dist <= 10)
@@ -124,7 +122,6 @@
     CLLocation *loc = [locations firstObject];
     _myLoc = loc;
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-   // NSLog(@"lat: %lf, long: %lf, speed:%lf", _myLoc.coordinate.latitude, _myLoc.coordinate.longitude, loc.speed);
     
     if (self.alreadyZoomed == NO) {
         [self zoomToLocation:loc.coordinate];
@@ -180,8 +177,6 @@
             [self checkDate];
             [tmpPin synchronize];
             
-            NSLog(@"checkpoint reached");
-            
             if ( _nextPoint < _routePoints.count)
             {
                 [self placeNextPoint:_nextPoint];
@@ -195,8 +190,6 @@
     
     CLLocation *lastPoint = [[CLLocation alloc] initWithLatitude:tmpPoint.coordinate.latitude longitude:tmpPoint.coordinate.longitude];
     
-    NSLog( @"Last point long: %lf lat: %lf", tmpPoint.coordinate.longitude,tmpPoint.coordinate.latitude);
-    
     
     if([loc distanceFromLocation:lastPoint] < 10)
     {
@@ -204,7 +197,6 @@
         [defaults setObject: self.timer.text forKey: @"lastTime"];
         [defaults setFloat:_distanceTravelled + [defaults floatForKey:@"totalDistanc"] forKey:@"totalDistanc"];
         [defaults synchronize];
-        NSLog(@"RUN IS OVER");
         [defaults setObject:nil forKey:@"currentLocationLongitude"];
         [defaults setObject:nil forKey:@"currentLocationLatitude"];
         
