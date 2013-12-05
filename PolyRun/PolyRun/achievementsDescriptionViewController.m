@@ -50,6 +50,7 @@ NSString * achievement;
     _descriptionBox.text = [NSString stringWithContentsOfFile:[mainBundle pathForResource:achievement ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
     //Updates progress bar based on progress for achievement
     _achievementProgress.progress = [defaults floatForKey:twelveLetterAchievement]/[[[defaults objectForKey:@"numberOfRunsDict"] objectForKey: achievementLevel] intValue];
+    NSLog(@"%f", [defaults floatForKey:twelveLetterAchievement]/[[[defaults objectForKey:@"numberOfRunsDict"] objectForKey: achievementLevel] intValue]);
 	// Do any additional setup after loading the view.
 }
 

@@ -176,7 +176,7 @@
         {
             //set point record for achievments
             NSUserDefaults *tmpPin = [NSUserDefaults standardUserDefaults];
-            [tmpPin setInteger:[tmpPin integerForKey:@"totalNumberOfPins"] +1 forKey:@"totalNumberOfPins"];
+            [tmpPin setInteger:[tmpPin integerForKey:@"numberOfPins"] +1 forKey:@"numberOfPins"];
             [self checkDate];
             [tmpPin synchronize];
             

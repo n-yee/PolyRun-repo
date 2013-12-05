@@ -80,7 +80,7 @@
 - (void) updateAchievements {
     //Sets and stores achievement requirements
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary * numberOfPins = [[NSDictionary alloc] initWithObjectsAndKeys:@5, @"LevelOne", @10, @"LevelTwo", @15, @"LevelThree", @20, @"LevelFour", nil];
+    NSDictionary * numberOfPins = [[NSDictionary alloc] initWithObjectsAndKeys:@10, @"LevelOne", @30, @"LevelTwo", @50, @"LevelThree", @100, @"LevelFour", nil];
     NSDictionary * numberOfRuns = [[NSDictionary alloc] initWithObjectsAndKeys:@1, @"LevelOne", @5, @"LevelTwo", @10, @"LevelThree", @20, @"LevelFour", @50, @"LevelFive", @100, @"LevelSix", nil];
     NSDictionary * totalDistanc = [[NSDictionary alloc] initWithObjectsAndKeys:@1, @"LevelOne", @5, @"LevelTwo", @10, @"LevelThree", @20, @"LevelFour", @50, @"LevelFive", @100, @"LevelSix", nil];
     NSDictionary * keepVisiting = [[NSDictionary alloc] initWithObjectsAndKeys:@2, @"LevelOne", @5, @"LevelTwo", @7, @"LevelThree", @10, @"LevelFour", @14, @"LevelFive", @21, @"LevelSix", nil];
@@ -88,6 +88,7 @@
     [defaults setObject:numberOfRuns forKey:@"numberOfRunsDict"];
     [defaults setObject:totalDistanc forKey:@"totalDistancDict"];
     [defaults setObject:keepVisiting forKey:@"keepVisitingDict"];
+    [defaults synchronize];
     [self checkAchievements];
 }
 - (NSString *) returnNumberString: (int) number {
@@ -102,10 +103,11 @@
 }
 - (void) checkAchievements {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:5 forKey:@"numberOfPins"];
     //Checks each achievement for success
     for (int i=1; i<5; i++) {
         NSString * numberString = [self returnNumberString:i];
-        if ([defaults floatForKey:@"totalNumberOfPins"] >= [[[defaults objectForKey:@"numberOfPinsDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue]) [defaults setBool:YES forKey:[NSString stringWithFormat:@"numberOfPinsLevel%@Status", numberString]];
+        if ([defaults floatForKey:@"numberOfPins"] >= [[[defaults objectForKey:@"numberOfPinsDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue]) [defaults setBool:YES forKey:[NSString stringWithFormat:@"numberOfPinsLevel%@Status", numberString]];
         else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"numberOfPinsLevel%@Status", numberString]];
         if ([defaults floatForKey:@"numberOfRuns"] >= [[[defaults objectForKey:@"numberOfRunsDict"] objectForKey: [NSString stringWithFormat:@"Level%@", numberString]] intValue])[defaults setBool:YES forKey:[NSString stringWithFormat:@"numberOfRunsLevel%@Status", numberString]];
         else [defaults setBool: NO forKey:[ NSString stringWithFormat:@"numberOfRunsLevel%@Status", numberString]];
