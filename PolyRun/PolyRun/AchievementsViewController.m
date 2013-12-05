@@ -103,7 +103,6 @@
 }
 - (void) checkAchievements {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:5 forKey:@"numberOfPins"];
     //Checks each achievement for success
     for (int i=1; i<5; i++) {
         NSString * numberString = [self returnNumberString:i];
